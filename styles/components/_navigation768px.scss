@@ -1,0 +1,22 @@
+
+@media screen and (min-width: 768px) {
+    .navigation{
+        width: 40vw;
+        right: -40vw;
+    }
+
+    .header{
+        
+        height: 75px;
+
+        .logo{
+            height: 60px;
+            margin: 8px 1vw;
+        }
+        
+    }
+
+    #trigger{
+        top: 37.5px;
+    }
+}

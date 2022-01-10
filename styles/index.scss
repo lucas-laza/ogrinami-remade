@@ -1,0 +1,21 @@
+@import "settings.scss";
+@import "./components/navigation";
+@import "./components/articles";
+@import "./components/quizz";
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    overflow-x: hidden;
+    // height: 300vh;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,644 @@
+*{
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@600&family=Quicksand&family=Sniglet&display=swap');
+
+
+.texte_t{
+    display: inline-block;
+}
+
+// .article{
+//     position: relative;
+// }
+
+.container{
+    display: grid;
+    height: auto;
+    width: 100vw;
+    margin: auto;
+    margin: auto;
+    grid-template: 90px repeat(5,auto) 5vh repeat(3,auto)/ 1fr;
+    grid-template-areas: ".""title""intro""part1""c_IMG""part2"".""parents""recom""retour";
+    gap: 5vh;
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+    &>*{
+        margin: 0 5vw;
+        border-radius: 12px;
+
+        &>div{
+            border-radius: 12px;
+
+        }
+    }
+
+    
+
+    // div{
+       
+    // }
+
+    // h1{
+        
+    // }
+
+    .GC_title{
+        
+
+        grid-area: title;
+        margin: 0;
+
+        width: 100%;
+        height: 33vh;
+
+        
+        
+
+        position: relative;
+
+        
+
+        .background_title{
+
+            // background-color: green;
+            // border: black solid 5px;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            border-radius: 0px;
+            display: grid;
+            grid-template-areas: 1fr / 1fr;
+
+            
+
+            // background: url("https://cutewallpaper.org/21/bay-wallpaper/Disko-Bay-Wallpaper-Winter-Nature-Wallpapers-in-jpg-format-.jpg");
+            // background-position: center;
+            // background-size: cover ;
+            // background-repeat: no-repeat;
+            // transform: rotate(1.2deg);
+            // clip-path: polygon(4% 1%, 99% 5%, 96% 98%, 0 94%);
+
+            .text_title{
+                position: absolute;
+                text-align: center;
+
+                align-self: center;
+                justify-self: center;
+
+                display: grid;
+                grid-template-areas: 1fr / 1fr;
+                
+                padding: 5%;
+                
+                min-height: 20%;
+                max-height: 80%;
+                height: auto;
+
+                min-width: 50%;
+                max-width: 90%;
+                width: auto;
+
+                // transform: rotate(-1.2deg);
+
+                // border: black solid 5px;
+
+                // top: 50%;
+                // left: 50%;
+                // transform: translate(-50%,-50%);
+            
+
+                // background-color: rgba(36, 36, 36, 0.733);
+                // backdrop-filter: blur(5px);
+                // border-radius: 15px;
+                
+                
+
+
+                h1{
+                    color: white;
+                    font-size: 2.4rem;
+
+                    padding: 0;
+                    margin: 0;
+                    text-shadow: black 3px 0 0;
+                    
+
+                    
+
+                    align-self: center;
+                    justify-self: center;
+
+                    font-family: 'atma';
+                    font-weight: 600;
+                }
+
+                
+    }
+
+
+        }
+
+    }
+
+    .GC_intro{
+        grid-area: intro;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+        
+
+        div{
+            audio{
+                margin: 2vh 0;
+            }
+        }
+
+        
+
+        // -webkit-clip-path: polygon(1% 6%, 99% 1%, 99% 94%, 1% 98%); 
+        // clip-path: polygon(1% 6%, 99% 1%, 99% 94%, 1% 98%);
+
+
+        .p{
+
+            background-color: #596BAB;
+            padding: 15px 5vw ;
+            color:white;
+       
+
+            transform: rotate(-1.5deg);
+
+            font-family: 'Sniglet';
+            font-size: 1.15rem;
+
+            transform: rotate(1.5deg);
+
+        }
+
+    }
+
+    .GC_part1{
+        grid-area: part1;
+
+        display: grid;
+        grid-template: repeat(5,auto) / 1fr;
+        grid-template-areas: "titre_P1""texte_P1""illus1""titre_P2""texte_P2";
+        gap: 2vh;
+
+        .box_title{
+            
+            background-color: #3C8EED;
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        h2{
+            font-family: 'Atma';
+            font-size: 1.65rem;
+            color: white;
+        }
+
+        p{
+            font-size: 1.15rem;
+            color: white;
+        }
+
+        .illus{
+            width: 100%;
+            height: 40vw;
+
+            background-color: rgb(101, 137, 143);
+
+            
+          
+        }
+
+        .box_P{
+            
+            background-color: #76AFEF;
+           
+            padding: 15px;
+        }
+
+        .BT_P1{
+            grid-area: titre_P1;
+        }
+
+        
+
+        .BP_P1{
+            grid-area: texte_P1;
+        }
+
+
+        .illus1{
+            grid-area: illus1;
+
+        
+
+        }
+
+        .box_title .BT_P2{
+            grid-area: titre_P2;
+
+            // h2{
+
+            // }
+        }
+        
+        .box_P .BP_P2{
+
+            grid-area: texte_P2;
+
+
+            // p{
+
+            // }
+        }
+
+    }
+
+    .GC_central_IMG{
+        grid-area: c_IMG;
+
+       
+        // width: 100%;
+        height: 33vh;
+    }
+
+    .GC_part2{
+        grid-area: part2;
+
+        display: grid;
+        grid-template: repeat(6,auto) / 1fr;
+        grid-template-areas: "titre_P3""texte_P3""illus2""titre_P4""texte_P4""pied";
+        gap: 2vh;
+
+        .box_title{
+            
+            background-color: #3C8EED;
+            
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        .box_P{
+            
+            background-color: #76AFEF;
+            color:white;
+            
+            padding: 15px;
+        }
+
+        h2{
+            font-family: 'Atma';
+            font-size: 1.65rem;
+            color: white;
+        }
+
+        p{
+            font-size: 1.15rem;
+            color: white;
+        }
+
+        .illus{
+            width: 100%;
+            height: 40vw;
+
+            background-color: rgb(101, 137, 143);
+            
+        }
+
+        .BT_P3{
+            grid-area: titre_P3;
+        }
+
+        
+
+        .BP_P3{
+            grid-area: texte_P3;
+        }
+
+
+        .illus2{
+            grid-area: illus2;
+    
+
+        }
+
+        
+            .BT_P4{
+                grid-area: titre_P4;
+            }
+            
+
+            // h2{
+
+            // }
+        
+        
+       
+
+            .BP_P4{
+            grid-area: texte_P4;
+            }
+
+
+            // p{
+
+            // }
+        
+
+        .pied{
+            grid-area: pied;
+
+            h4{
+                margin: 0;
+                padding: 0;
+            }
+            
+        }
+
+
+
+
+    }
+
+    
+
+    .Recommandations{
+        grid-area: recom;
+        display: grid;
+        // grid-template:  auto repeat(3,1fr) / 1fr;
+        gap: 5vh;
+        // width: 100%;
+        height: 100vh;
+
+    //     &>div{
+    //         height: 100%;
+    //     width: 100%;     
+    //    }
+
+        a{
+            width: 100%;
+            height: 100%;
+        }
+
+        h3{
+            margin: 10vh 0 0 0;
+        }
+
+        .thumbnail{
+            height: 100%;
+            width: 100%;
+            
+            display: flex;
+            flex-direction: column;
+            
+            a{
+                text-decoration: none;
+                color: white;
+            }
+
+            h4{
+                font-size: 0.9rem;
+                
+                margin: 1vh;
+            }
+            .TB_BG{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: grid;
+                
+
+                .TB_title{
+                    
+                    
+                    justify-self: center;
+                    margin: 5%;
+                    padding: 3%;  
+                    position: absolute;
+                    bottom: 0;
+                    text-align: center;
+                   
+                    
+
+                    background-color: rgba(19, 19, 19, 0.644);
+                    border-radius: 15px;
+                    backdrop-filter: blur(5px);
+
+                    h1{
+                        margin: 0;
+                        
+    
+                        font-size: 1.7rem;
+                        font-family: 'Atma';
+                        color: white;
+                        
+                    }
+                }
+                
+
+                
+            }
+
+    
+        }
+    }
+
+    .For_Parents{
+        grid-area: parents;
+
+        height: 50vh;
+        // width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        h3{
+            margin: 0;
+            padding: 1vh;
+            background-color: rgb(49, 49, 49);
+            width: 100%;
+        }
+
+        .For_P_Container{
+            width: 100%;
+            height: 100%;
+            gap: 10%;
+            
+
+            flex-direction: column;
+
+            .Asso{
+                width: 100%;
+                height: 50%;
+
+                background-color: darkblue;
+                position: relative;
+
+                
+
+                a{
+                    position: relative;
+                    display: grid;
+                    width: 100%;
+                    height: 100%;
+
+                    .bouton{
+                        min-width: 50%;
+                        max-width: 80%;
+                        color: white;
+                        border-radius: 50px;
+                        max-height: 50%;
+                        padding: 5%;
+                        background-color: darkgreen;
+                        margin: 5%;
+                        position: absolute;
+    
+                        align-self: flex-end;
+                        justify-self: center;
+                    }
+    
+
+                }
+            }
+
+            .Shop{
+                width: 100%;
+                height: 50%;
+
+                background-color:darkgoldenrod;
+
+                a{
+                    position: relative;
+                    display: grid;
+                    width: 100%;
+                    height: 100%;
+
+                    .bouton{
+                        min-width: 50%;
+                        max-width: 80%;
+                        color: white;
+                        border-radius: 50px;
+                        max-height: 50%;
+                        padding: 5%;
+                        background-color: darkgreen;
+                        margin: 5%;
+                        position: absolute;
+    
+                        align-self: flex-end;
+                        justify-self: center;
+                    }
+    
+
+                }
+
+                
+            }
+
+        }
+    }
+
+    .Retour_Accueil{
+        grid-area: retour;
+
+        display: flex;
+        flex-direction: row;
+
+        width: 100%;
+        height: 30vh;
+        background-color: yellow;
+        padding: 2%;
+
+        margin: 15vh 0;
+
+        .Grinouille{
+            width: 40%;
+            height: 100%;
+
+            display: grid;
+
+            .Grinouille_IMG{
+                background-color: yellowgreen;
+                width: 100px;
+                height: 150px;
+
+                justify-self: center;
+                align-self: center;
+
+
+            }
+
+        }
+
+        .Retour_T{
+            height: auto;
+            padding:1%;
+            min-width: 40%;
+            max-width: 60%;
+            
+
+            align-self: center;
+            text-align: center;
+            
+
+            a{
+
+                
+                display: grid;
+                text-align: center;
+            
+                .bouton{
+                    
+
+                    background-color: royalblue;
+                    padding: 5%;
+                    width: auto;
+                    border-radius: 15px;
+
+                    max-width: 80%;
+                    justify-self: center;
+
+                    p{
+                    color: white;
+                    text-decoration: none;
+                    font-size: 1.3rem;
+                    }
+
+                    
+                }
+            }
+
+        }
+    }
+
+
+
+
+
+    
+
+    
+
+    
+
+}
+
+.illus *{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+@import "./article768px";
+@import "./article1280px";
