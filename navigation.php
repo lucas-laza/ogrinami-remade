@@ -14,11 +14,11 @@
             
 
             
-                <a href="article.php"><?php if($_SESSION["lang"] == "FR"){ echo "Espace enfant"; } else if($_SESSION["lang"] == "EN"){echo "Kid's space";} ?></a>
+                <a href="articles.php"><?php if($_SESSION["lang"] == "FR"){ echo "Articles"; } else if($_SESSION["lang"] == "EN"){echo "Articles";} ?></a>
             
 
             
-                <a href=""><?php if($_SESSION["lang"] == "FR"){ echo "Espace parent"; } else if($_SESSION["lang"] == "EN"){echo "Parent's space";} ?></a>
+                <a href=""><?php if($_SESSION["lang"] == "FR"){ echo "Mini-jeux"; } else if($_SESSION["lang"] == "EN"){echo "Mini games";} ?></a>
             
 
             
