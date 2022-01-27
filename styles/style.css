@@ -858,6 +858,50 @@ body {
     grid-template-areas: "fqi fqp";
   }
 }
+.home {
+  padding-top: 90px;
+  height: fit-content;
+  width: 100vw;
+  display: grid;
+}
+.home .terre {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #222272;
+  display: grid;
+}
+.home .terre .titres {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+.home .terre .titres h1, .home .terre .titres h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "atma";
+  color: white;
+}
+.home .terre .titres h1 {
+  font-size: calc(0.3rem + 8vw);
+}
+.home .terre .titres h2 {
+  font-size: calc(0.1rem + 6vw);
+  opacity: 0.9;
+}
+.home .terre .bouton {
+  position: absolute;
+  justify-self: center;
+  align-self: flex-end;
+  display: grid;
+  width: 80%;
+  height: fit-content;
+  padding: 5%;
+  background-color: #86ed258c;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #BFD975;
+}
+
 * {
   box-sizing: border-box;
 }

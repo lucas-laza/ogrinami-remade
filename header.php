@@ -1,7 +1,15 @@
 <div class="header">
 <?php
-$article = $_GET["id"] ;
+// $article = $_GET["id"] ;
 
+session_start();
+// unset($_SESSION["lang"]);
+
+// $_SESSION["lang"] = 0;
+
+if (!isset($_SESSION["lang"])){
+    $_SESSION["lang"] = "FR";
+}
 
 ?>
 
