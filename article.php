@@ -10,17 +10,10 @@
 <body>
 
 <?php
-
+session_unset();
 require "PDO.php";
 
-session_start();
-// unset($_SESSION["lang"]);
 
-// $_SESSION["lang"] = 0;
-
-if (!isset($_SESSION["lang"])){
-    $_SESSION["lang"] = "FR";
-}
 
 if (isset($_GET["id"])){
     $article = $_GET["id"];

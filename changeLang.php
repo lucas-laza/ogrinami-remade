@@ -1,5 +1,5 @@
 <?php 
-
+session_unset();
 session_start();
 
 $idA = $_POST["idA"];

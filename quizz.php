@@ -15,7 +15,7 @@
     require "PDO.php";
     
 
-session_start();
+// session_start();
 
 require "header.php";
 

@@ -2,15 +2,17 @@
 <?php
 // $article = $_GET["id"] ;
 
-session_start();
+// session_start();
 // unset($_SESSION["lang"]);
 
 // $_SESSION["lang"] = 0;
 
+session_unset();
+session_start();
+
 if (!isset($_SESSION["lang"])){
     $_SESSION["lang"] = "FR";
 }
-
 ?>
 
     
