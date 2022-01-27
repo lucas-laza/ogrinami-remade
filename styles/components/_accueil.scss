@@ -10,16 +10,21 @@ display: grid;
 
     .terre{
         width: 100vw;
-        height: 100vh;
+        height: 73.5vh;
         position: relative;
 
         background-color: rgb(34, 34, 114);
         display: grid;
 
+        background-image: url("../img/accueil/terreMobile.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
         .titres{
             position: absolute;
             top: 2%;
-            left: 2%;
+            left: 5%;
 
             h1,h2{
                 margin: 0;
@@ -53,14 +58,103 @@ display: grid;
 
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: #BFD975;
+
+            margin-bottom: 10%;
+            border-radius: 10vh;
+
+            div{
+                justify-self: center;
+                align-self: center;
+                font-family: "Quicksand",Verdana, Geneva, Tahoma, sans-serif;
+                font-size: calc(0.3rem + 3vw);
+            }
         }
 
         
     }
 
-// .rubriques{
-            
-        // }
+    .rubriques{
+
+        height: fit-content;
+        min-height: 250vh;
+        background: linear-gradient(180deg, #32B878 34.13%, #409b7a 100%);
+        display: grid;
+        grid-template: auto 1fr / 1fr;
+    
+        
+
+        .titre{
+            background-color: black;
+            color: white;
+            display: grid;
+            font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
+            height: fit-content;
+            min-height: 10vh;
+            font-size: calc(5vw + 0.4rem);
+
+            div{
+                align-self: center;
+                justify-self: center;
+            }
+        }
+
+        .liste{
+            height: fit-content;
+            width: 100vw;
+            padding: 15vh 5vw;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10vh;
+
+            .rubrique{
+                height: 65vh;
+                background-color: #cffe96ce;
+                padding: 5vw;
+
+                border-radius: 5vh;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                border: black 6px solid;
+
+                .img{
+                    height: 70%;
+                    background-image: url("../img/accueil/article.png");
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;    
+                    border-radius: 2.5vh;  
+                    
+                    border: black 6px solid;
+                }
+
+                .bouton{
+                    height: 20%;
+                    border-radius: 2.5vh;  
+
+                    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.128) 50.31%, rgba(0, 0, 0, 0.172) 100%),
+linear-gradient(0deg, #604ED0, #604ED0);
+
+                    display: grid;
+
+                    border: black 6px solid;
+                    
+                    div{
+                        justify-self: center;
+                    align-self: center;
+                    color: white;
+                    font-family: "atma";
+                    font-size: calc(0.2rem + 8vw);
+                    }
+
+                }
+            }
+        }
+                
+    }
 
 
 }
