@@ -11,7 +11,7 @@
 
 <?php
     include "PDO.php";
-    include "header.php"
+    include "header.php";
 ?>
 
     <div class="listeArticles">
@@ -27,8 +27,24 @@
 
                 foreach ($result as $row){
                     $idTexte = $row["ext_id_texte_titre_E"];
-                    echo $idTexte;
+                    $idR = $row["id_article_E"];
+        
+                    // echo $idTexte;
+                    echo "<div class='listchild' style=\"background-image: url('http://www.ogrinami.com/img/article/$idR/1.jpg')\">";
+                    echo "<a href='article.php?id=$idR'></a>";
+                    echo "<h1>";
                     includeWithVariables('texte.php', array('id' => $idTexte));
+                    echo "</h1>";
+                    echo "<h2>";
+                    includeWithVariables('texte.php', array('id' => $row["ext_id_pays_E"])); 
+                    if($_SESSION["lang"] == "FR"){
+                        echo ": article du " ;
+                    } else if ($_SESSION["lang"] == "EN"){
+                            echo ": article from ";
+                        }
+                    echo $row["date_E"];  
+                    echo "</h2>";
+                    echo "</div>";
                     
                 }
 
