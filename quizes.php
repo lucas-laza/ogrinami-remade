@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
     <title>Ogrinami</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
@@ -14,11 +14,11 @@
     include "header.php";
 ?>
 
-    <div class="listeArticles">
-        <div><h1>Articles</h1></div>
+    <div class="quizes">
+        <div><h1>Quiz</h1></div>
         <div class="liste">
             <?php
-                $stmt = $db->query("SELECT * FROM article_enfant ORDER BY date_E DESC");
+                $stmt = $db->query("SELECT * FROM quizzstart ORDER BY id_quizzstart DESC");
                 
 
 
@@ -26,24 +26,17 @@
 
 
                 foreach ($result as $row){
-                    $idTexte = $row["ext_id_texte_titre_E"];
-                    $idR = $row["id_article_E"];
+                    // $idTexte = $row["ext_id_texte_titre_E"];
+                    $idQ = $row["id_quizzstart"];
         
                     // echo $idTexte;
-                    echo "<div class='listchild' style=\"background-image: url('http://www.ogrinami.com/img/article/$idR/1.jpg')\">";
-                    echo "<a href='article.php?id=$idR'></a>";
+                    // echo "<div class='listchild' style=\"background-image: url('http://www.ogrinami.com/img/quiz/$idR/1.jpg')\">";
+                    echo "<div class='listchild'>";
+                    echo "<a href='quizz.php?id=$idQ'></a>";
                     echo "<h1>";
-                    includeWithVariables('texte.php', array('id' => $idTexte));
+                    if ($_SESSION["lang"] == "FR"){echo $row["titre_quizz_FR"];}else if ($_SESSION["lang"] == "EN"){ echo $row["titre_quizz_EN"]; } 
                     echo "</h1>";
-                    echo "<h2>";
-                    includeWithVariables('texte.php', array('id' => $row["ext_id_pays_E"])); 
-                    if($_SESSION["lang"] == "FR"){
-                        echo ": article du " ;
-                    } else if ($_SESSION["lang"] == "EN"){
-                            echo ": article from ";
-                        }
-                    echo $row["date_E"];  
-                    echo "</h2>";
+                    
                     echo "</div>";
                     
                 }
@@ -75,6 +68,6 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
             ?>
         </div>
     </div>
-    
+  
 </body>
 </html>

@@ -80,7 +80,7 @@ display: grid;
         background: linear-gradient(180deg, #32B878 34.13%, #409b7a 100%);
         display: grid;
         grid-template: auto 1fr / 1fr;
-    
+        
         
 
         .titre{
@@ -120,6 +120,17 @@ display: grid;
 
                 border: black 6px solid;
 
+                position: relative;
+    
+
+        a{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top:0;
+            left: 0;
+        }
+
                 .img{
                     height: 70%;
                     background-image: url("../img/accueil/article.png");
@@ -132,7 +143,8 @@ display: grid;
                 }
 
                 .bouton{
-                    height: 20%;
+                    min-height: 20%;
+                    height: fit-content;
                     border-radius: 2.5vh;  
 
                     background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.128) 50.31%, rgba(0, 0, 0, 0.172) 100%),
@@ -157,4 +169,149 @@ linear-gradient(0deg, #604ED0, #604ED0);
     }
 
 
+}
+
+@media screen and (min-width:768px) and (orientation: portrait) {
+    .home{
+
+        padding-top: 60px;
+
+        .terre{
+
+            // background-image: url("../img/accueil/terreTablette.jpg");
+            // background-position: bottom right;
+
+            .titres{
+                h1{
+                    font-size: calc(0.7rem + 5vw);
+                }
+                h2{
+                    font-size: calc(0.6rem + 3.5vw);
+                }
+            }
+
+            .bouton{
+                width: 60%;
+                padding: 3vw;
+                margin-bottom: 5%;
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width:768px) and (orientation: landscape) {
+    .home{
+
+        padding-top: 60px;
+
+        .terre{
+
+            background-image: url("../img/accueil/terreTablette.jpg");
+            background-position: bottom right;
+            min-height: 540px;
+
+            .titres{
+                top: 5%;
+                h1{
+                    font-size: calc(0.5rem + 4vw);
+                }
+                h2{
+                    font-size: calc(0.35rem + 3.5vw);
+                }
+            }
+
+            .bouton{
+                margin-bottom: 3%;
+                margin-left: 5%;
+                min-width: 35%;
+                width: fit-content;
+                justify-self: flex-start;
+
+                div{
+                    font-size: calc(0.5rem + 2vw);
+                }
+            }
+        }
+
+
+        .rubriques{
+
+            .liste{
+    
+                .rubrique{
+                    height: 65vw;
+
+                    .bouton{
+
+                        div{
+                            font-size: calc(0.2rem + 5vw);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    
+}
+
+
+@media screen and (min-width: 1440px) {
+    
+
+    .home{
+        .terre{
+            height: 85vh;
+
+            min-height: 525px;
+            background-image: url("../img/accueil/terrePC.jpg");
+            background-position: bottom right;
+            background-size: cover;
+
+            .titres{
+                h1{
+                    font-size: calc(0.3rem + 4vw);
+                }
+
+                h2{
+                    font-size: calc(0.2rem + 3vw);
+                }
+            }
+
+            .bouton{
+                min-width: 35%;
+                padding: 2% 5%;
+            }
+        }
+
+        .rubriques{
+            display: grid;
+
+            .titre{
+                font-size: calc(0.5rem + 3.5vw);
+            }
+            .liste{
+                max-width: 1440px;
+                justify-self: center;
+                display: grid;
+                width: 65%;
+
+                .rubrique{
+                    justify-self: center;
+                    width: 100%;
+                    height: 80vh;
+                    padding: 2vw;
+
+                    .bouton{
+
+                        div{
+                            font-size: calc(0.5rem + 3vw);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
