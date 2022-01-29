@@ -1,52 +1,56 @@
-*{
+* {
     box-sizing: border-box;
 }
 
 
+.header {
+    background-color: #16ABFC;
+}
 
-
-.texte_t{
+.texte_t {
     display: inline-block;
+
 }
 
 // .article{
 //     position: relative;
 // }
 
-.container{
+.container {
     display: grid;
     height: auto;
     width: 100vw;
     margin: auto;
     margin: auto;
-    grid-template: 90px repeat(5,auto) 5vh repeat(3,auto)/ 1fr;
+    grid-template: 90px repeat(5, auto) 5vh repeat(3, auto)/ 1fr;
     grid-template-areas: ".""title""intro""part1""c_IMG""part2"".""parents""recom""retour";
     gap: 5vh;
 
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
 
-    &>*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    &>* {
         margin: 0 5vw;
         border-radius: 12px;
 
-        &>div{
+        &>div {
             border-radius: 12px;
 
         }
     }
 
-    
+
 
     // div{
-       
+
     // }
 
     // h1{
-        
+
     // }
 
-    .GC_title{
-        
+    .GC_title {
+
 
         grid-area: title;
         margin: 0;
@@ -54,25 +58,25 @@
         width: 100%;
         height: 33vh;
 
-        
-        
+
+
 
         position: relative;
 
-        
 
-        .background_title{
+
+        .background_title {
 
             // background-color: green;
             // border: black solid 5px;
             width: 100%;
             height: 100%;
             position: relative;
-            border-radius: 0px;
+            border-radius: 20px;
             display: grid;
             grid-template-areas: 1fr / 1fr;
 
-            
+
 
             // background: url("https://cutewallpaper.org/21/bay-wallpaper/Disko-Bay-Wallpaper-Winter-Nature-Wallpapers-in-jpg-format-.jpg");
             // background-position: center;
@@ -81,7 +85,7 @@
             // transform: rotate(1.2deg);
             // clip-path: polygon(4% 1%, 99% 5%, 96% 98%, 0 94%);
 
-            .text_title{
+            .text_title {
                 position: absolute;
                 text-align: center;
 
@@ -90,9 +94,9 @@
 
                 display: grid;
                 grid-template-areas: 1fr / 1fr;
-                
+
                 padding: 5%;
-                
+
                 min-height: 20%;
                 max-height: 80%;
                 height: auto;
@@ -108,25 +112,25 @@
                 // top: 50%;
                 // left: 50%;
                 // transform: translate(-50%,-50%);
-            
+
 
                 // background-color: rgba(36, 36, 36, 0.733);
                 // backdrop-filter: blur(5px);
                 // border-radius: 15px;
-                
-                
 
 
-                h1{
+
+
+                h1 {
                     color: white;
                     font-size: 2.4rem;
 
                     padding: 0;
                     margin: 0;
                     text-shadow: black 3px 0 0;
-                    
 
-                    
+
+
 
                     align-self: center;
                     justify-self: center;
@@ -135,44 +139,45 @@
                     font-weight: 600;
                 }
 
-                
-    }
+
+            }
 
 
         }
 
     }
 
-    .GC_intro{
+    .GC_intro {
         grid-area: intro;
         display: flex;
         flex-direction: column;
         gap: 3vh;
-        
 
-        div{
-            audio{
+
+        div {
+            audio {
                 margin: 2vh 0;
             }
         }
 
-        
+
 
         // -webkit-clip-path: polygon(1% 6%, 99% 1%, 99% 94%, 1% 98%); 
         // clip-path: polygon(1% 6%, 99% 1%, 99% 94%, 1% 98%);
 
 
-        .p{
+        .p {
 
-            background-color: #596BAB;
-            padding: 15px 5vw ;
-            color:white;
-       
+            background-color: #2648c2;
+            padding: 35px 5vw;
+            color: white;
+
 
             transform: rotate(-1.5deg);
 
             font-family: 'Sniglet';
             font-size: 1.15rem;
+            text-align: justify;
 
             transform: rotate(1.5deg);
 
@@ -180,77 +185,79 @@
 
     }
 
-    .GC_part1{
+    .GC_part1 {
         grid-area: part1;
 
         display: grid;
-        grid-template: repeat(5,auto) / 1fr;
+        grid-template: repeat(5, auto) / 1fr;
         grid-template-areas: "titre_P1""texte_P1""illus1""titre_P2""texte_P2";
         gap: 2vh;
 
-        .box_title{
-            
+        .box_title {
+
             background-color: #3C8EED;
             padding: 10px;
             text-align: center;
 
         }
 
-        h2{
+        h2 {
             font-family: 'Atma';
             font-size: 1.65rem;
             color: white;
         }
 
-        p{
+        p {
             font-size: 1.15rem;
             color: white;
+            text-align: justify;
+            padding: 5px;
         }
 
-        .illus{
+        .illus {
             width: 100%;
             height: 40vw;
 
-            background-color: rgb(101, 137, 143);
+            background-color: #8BE1F4;
 
-            
-          
+
+
         }
 
-        .box_P{
-            
+        .box_P {
+
             background-color: #76AFEF;
-           
+
             padding: 15px;
         }
 
-        .BT_P1{
+        .BT_P1 {
             grid-area: titre_P1;
         }
 
-        
 
-        .BP_P1{
+
+        .BP_P1 {
             grid-area: texte_P1;
         }
 
 
-        .illus1{
+        .illus1 {
             grid-area: illus1;
 
-        
+
 
         }
 
-        .box_title .BT_P2{
+        .box_title .BT_P2 {
             grid-area: titre_P2;
 
             // h2{
 
             // }
         }
-        
-        .box_P .BP_P2{
+
+        .box_P .BP_P2 {
 
             grid-area: texte_P2;
 
@@ -262,106 +269,111 @@
 
     }
 
-    .GC_central_IMG{
+    .GC_central_IMG {
         grid-area: c_IMG;
 
-       
+
         // width: 100%;
         height: 33vh;
     }
 
-    .GC_part2{
+    .GC_part2 {
         grid-area: part2;
 
         display: grid;
-        grid-template: repeat(6,auto) / 1fr;
+        grid-template: repeat(6, auto) / 1fr;
         grid-template-areas: "titre_P3""texte_P3""illus2""titre_P4""texte_P4""pied";
         gap: 2vh;
 
-        .box_title{
-            
+        .box_title {
+
             background-color: #3C8EED;
-            
+
             padding: 10px;
             text-align: center;
 
         }
 
-        .box_P{
-            
+        .box_P {
+
             background-color: #76AFEF;
-            color:white;
-            
+            color: white;
+
             padding: 15px;
         }
 
-        h2{
+        h2 {
             font-family: 'Atma';
             font-size: 1.65rem;
             color: white;
         }
 
-        p{
+        p {
             font-size: 1.15rem;
             color: white;
         }
 
-        .illus{
+        .illus {
             width: 100%;
             height: 40vw;
 
             background-color: rgb(101, 137, 143);
-            
+
         }
 
-        .BT_P3{
+        .BT_P3 {
             grid-area: titre_P3;
+
         }
 
-        
 
-        .BP_P3{
+
+        .BP_P3 {
             grid-area: texte_P3;
+            text-align: justify;
         }
 
 
-        .illus2{
+        .illus2 {
             grid-area: illus2;
-    
+
 
         }
 
-        
-            .BT_P4{
-                grid-area: titre_P4;
-            }
-            
 
-            // h2{
+        .BT_P4 {
+            grid-area: titre_P4;
+        }
 
-            // }
-        
-        
-       
 
-            .BP_P4{
+        // h2{
+
+        // }
+
+
+
+
+        .BP_P4 {
             grid-area: texte_P4;
-            }
+            text-align: justify;
+        }
 
 
-            // p{
+        // p{
 
-            // }
-        
+        // }
 
-        .pied{
+
+        .pied {
             grid-area: pied;
 
-            h4{
+            h4 {
                 margin: 0;
                 padding: 0;
+                color: #2648c2;
+
             }
-            
+
         }
 
 
@@ -369,9 +381,9 @@
 
     }
 
-    
 
-    .Recommandations{
+
+    .Recommandations {
         grid-area: recom;
         display: grid;
         // grid-template:  auto repeat(3,1fr) / 1fr;
@@ -379,80 +391,81 @@
         // width: 100%;
         height: 100vh;
 
-    //     &>div{
-    //         height: 100%;
-    //     width: 100%;     
-    //    }
+        //     &>div{
+        //         height: 100%;
+        //     width: 100%;     
+        //    }
 
-        a{
+        a {
             width: 100%;
             height: 100%;
         }
 
-        h3{
+        h3 {
             margin: 10vh 0 0 0;
         }
 
-        .thumbnail{
+        .thumbnail {
             height: 100%;
             width: 100%;
-            
+
             display: flex;
             flex-direction: column;
-            
-            a{
+
+            a {
                 text-decoration: none;
                 color: white;
             }
 
-            h4{
+            h4 {
                 font-size: 0.9rem;
-                
+
                 margin: 1vh;
             }
-            .TB_BG{
+
+            .TB_BG {
                 width: 100%;
                 height: 100%;
                 position: relative;
                 display: grid;
-                
 
-                .TB_title{
-                    
-                    
+
+                .TB_title {
+
+
                     justify-self: center;
                     margin: 5%;
-                    padding: 3%;  
+                    padding: 3%;
                     position: absolute;
                     bottom: 0;
                     text-align: center;
-                   
-                    
 
-                    background-color: rgba(19, 19, 19, 0.644);
+
+
+                    background-color: #16ABFC;
                     border-radius: 15px;
                     backdrop-filter: blur(5px);
 
-                    h1{
+                    h1 {
                         margin: 0;
-                        
-    
+
+
                         font-size: 1.7rem;
                         font-family: 'Atma';
                         color: white;
-                        
+
                     }
                 }
-                
 
-                
+
+
             }
 
-    
+
         }
     }
 
-    .For_Parents{
+    .For_Parents {
         grid-area: parents;
 
         height: 50vh;
@@ -461,37 +474,38 @@
         display: flex;
         flex-direction: column;
 
-        h3{
+        h3 {
             margin: 0;
             padding: 1vh;
-            background-color: rgb(49, 49, 49);
+            background-color: #16ABFC;
             width: 100%;
+            color: white;
+            border-radius: 20px 20px 0px 0px;
         }
 
-        .For_P_Container{
+        .For_P_Container {
             width: 100%;
             height: 100%;
             gap: 10%;
-            
+
 
             flex-direction: column;
 
-            .Asso{
+            .Asso {
                 width: 100%;
                 height: 50%;
-
-                background-color: darkblue;
+                background-color: rgb(93, 93, 235);
                 position: relative;
+                border-radius: 0px 0px 0px 20px;
 
-                
 
-                a{
+                a {
                     position: relative;
                     display: grid;
                     width: 100%;
                     height: 100%;
 
-                    .bouton{
+                    .bouton {
                         min-width: 50%;
                         max-width: 80%;
                         color: white;
@@ -501,28 +515,33 @@
                         background-color: darkgreen;
                         margin: 5%;
                         position: absolute;
-    
+
                         align-self: flex-end;
                         justify-self: center;
                     }
-    
+
+                    .bouton:hover {
+                        background-color: #7FC50E;
+                    }
+
 
                 }
             }
 
-            .Shop{
+            .Shop {
                 width: 100%;
                 height: 50%;
 
-                background-color:darkgoldenrod;
+                background-color: darkgoldenrod;
+                border-radius: 0px 0px 20px 0px;
 
-                a{
+                a {
                     position: relative;
                     display: grid;
                     width: 100%;
                     height: 100%;
 
-                    .bouton{
+                    .bouton {
                         min-width: 50%;
                         max-width: 80%;
                         color: white;
@@ -532,21 +551,24 @@
                         background-color: darkgreen;
                         margin: 5%;
                         position: absolute;
-    
+
                         align-self: flex-end;
                         justify-self: center;
                     }
-    
+
+                    .bouton:hover {
+                        background-color: #7FC50E;
+                    }
 
                 }
 
-                
+
             }
 
         }
     }
 
-    .Retour_Accueil{
+    .Retour_Accueil {
         grid-area: retour;
 
         display: flex;
@@ -554,49 +576,64 @@
 
         width: 100%;
         height: 30vh;
-        background-color: yellow;
+        background-color: #7FC50E;
         padding: 2%;
 
         margin: 15vh 0;
 
-        .Grinouille{
-            width: 40%;
+
+        .Grinouille {
+            width: 100%;
             height: 100%;
 
             display: grid;
 
-            .Grinouille_IMG{
-                background-color: yellowgreen;
+
+            .Grinouille_IMG {
+                background-color: #b6f552;
                 width: 100px;
                 height: 150px;
-
+                display: flex;
                 justify-self: center;
                 align-self: center;
 
 
             }
 
+            .earth {
+                height: 50%;
+                width: auto;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                align-self: center;
+
+            }
+
         }
 
-        .Retour_T{
+        .Retour_T {
             height: auto;
-            padding:1%;
+            padding: 1%;
             min-width: 40%;
             max-width: 60%;
-            
+
 
             align-self: center;
             text-align: center;
+
+
+     
             
+            a {
 
-            a{
 
-                
                 display: grid;
                 text-align: center;
-            
-                .bouton{
-                    
+                text-decoration: none;
+
+                .bouton {
+
 
                     background-color: royalblue;
                     padding: 5%;
@@ -606,39 +643,86 @@
                     max-width: 80%;
                     justify-self: center;
 
-                    p{
+
+                }
+
+                .bouton:hover {
+                    background-color: rgb(106, 137, 231);
+
+
+                }
+
+                p {
                     color: white;
                     text-decoration: none;
                     font-size: 1.3rem;
-                    }
 
-                    
                 }
             }
 
         }
     }
 
+    h3{
+        font-family: 'Atma';
+    font-size: 1.65rem;
+    color: white;
+    }
+    .ecout {
+        font-family: 'atma';
+        font-weight: 600;
+    }
+
+
+    .audio {
+        width: 100%;
+        background-color: #6dccff;
+        display: grid;
+    }
 
 
 
+    audio {
 
-    
+        grid-area: part1;
 
-    
+        text-align: center;
 
-    
+    }
+
+    audio::-webkit-media-controls-enclosure {
+
+        border-radius: 0px;
+        background-color: #16ABFC;
+    }
+
+
+    audio:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(2px 3px 3px #333);
+    }
+
+
+
+    audio:hover::-webkit-media-controls-enclosure {
+
+        border-radius: 0px;
+        background-color: #16ABFC;
+    }
+
+
 
 }
 
-.illus *{
+.illus * {
     width: 100%;
     height: 100%;
 }
 
 
-
-
+.recom_date {
+    color: #456dfd;
+}
 
 @import "./article768px";
 @import "./article1280px";

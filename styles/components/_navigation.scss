@@ -1,5 +1,5 @@
 .header{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(113, 219, 14);
     position: fixed;
     z-index: 4;
     height: 90px;
@@ -174,9 +174,7 @@ footer{
     width: 55px;
     height: 55px;
 
-    background-color: rgb(49, 168, 69);
-    border-radius: 50%;
-
+    
     cursor: pointer;
 
     #burger {
@@ -184,7 +182,7 @@ footer{
 
         width: 35px;
         height: 5px;
-        background-color: rgb(147, 241, 160);
+        background-color: rgb(255, 255, 255);
 
         z-index: 6;
         display: flex;
@@ -225,8 +223,7 @@ body{
     width: 55px;
     height: 55px;
 
-    background-color:  rgb(147, 241, 160);
-    border-radius: 50%;
+
 
     cursor: pointer;
 
@@ -238,7 +235,7 @@ body{
 
         width: 35px;
         height: 5px;
-        background-color: rgb(49, 168, 69);
+        background-color: rgb(255, 255, 255);
 
         top: 50%;
         left: 50%;
@@ -260,7 +257,7 @@ body{
 
         width: 35px;
         height: 5px;
-        background-color: rgb(49, 168, 69);
+        background-color: rgb(255, 255, 255);
 
         top: 25%;
         left: 50%;
@@ -366,6 +363,27 @@ body{
     overflow: hidden;
 }
 
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #7FC50E d #2e78bd;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background:  #337e08;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #7FC50E;
+    border-radius: 20px;
+    border: 3px solid #000000;
+  }
 
+  
 @import "./navigation768px";
 @import "./navigation1280px"

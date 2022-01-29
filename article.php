@@ -86,16 +86,21 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                         <div class="GC_intro">
 
                             <div>
+                                <h2 class="ecout">
                             <?php if($_SESSION["lang"] == "FR"){
-                                echo "Ecouter l'article ?" ;
+                                echo "Écouter l'article ?" ;
                             } else if ($_SESSION["lang"] == "EN"){
                                     echo "Listen to the article:";
                                 } ?>
+                                </h2>
                                 <br>
+
+                                <div class="audio">
                                 <audio controls>
                                     <source src="voixoff/<?php echo $_GET["id"]; ?>.mp3" type="audio/mpeg">
                                     <source src="voixoff/<?php echo $_GET["id"]; ?>.ogg" type="audio/ogg">
                                 </audio>
+                                </div>
                             </div>
 
                             <div class="p">
@@ -272,16 +277,19 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                         <h3>Pour les parents:</h3>
                         <div class="For_P_Container">
                             <div class="Asso">
-
+                  
                             <a href="parent.php">
+                                
                             <div class="bouton">Associations partenaires</div>
+                            <img src="img/article/1/2.png" alt="">
                             </a>
                             
                             </div>
                             <div class="Shop">
-
+                          
                             <a href="shop.php">
                             <div class="bouton">Accéder à la boutique</div>
+                            <img src="img/article/1/2.png" alt="">
                             </a>
                             </div>
                         </div>
@@ -321,7 +329,7 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                             </div>
                             </a>
 
-                            <h4><?php
+                            <h4 class="recom_date" ><?php
                                      $stmt = $db->query("SELECT * FROM article_enfant WHERE $idR = id_article_E");
                                      $result = $stmt -> fetch(PDO::FETCH_ASSOC);
                                      $id = $result["ext_id_pays_E"];
@@ -358,7 +366,7 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                             </div>
                             </a>
 
-                            <h4><?php
+                            <h4 class="recom_date"><?php
                                      $stmt = $db->query("SELECT * FROM article_enfant WHERE $idR = id_article_E");
                                      $result = $stmt -> fetch(PDO::FETCH_ASSOC);
                                      $id = $result["ext_id_pays_E"];
@@ -396,7 +404,7 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                             </div>
                             </a>
 
-                            <h4><?php
+                            <h4 class="recom_date"><?php
                                      $stmt = $db->query("SELECT * FROM article_enfant WHERE $idR = id_article_E");
                                      $result = $stmt -> fetch(PDO::FETCH_ASSOC);
                                      $id = $result["ext_id_pays_E"];
@@ -415,7 +423,9 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
 
                         <div class="Retour_Accueil">
                             <div class="Grinouille">
-                                <div class="Grinouille_IMG"></div>
+                                <div class="Grinouille_IMG">
+                                <img class="earth" src="img/article/1/earth.png" alt="">
+                                </div>
                             </div>
                             <div class="Retour_T">
                                 <div>

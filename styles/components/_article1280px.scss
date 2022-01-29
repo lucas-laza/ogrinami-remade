@@ -16,7 +16,7 @@
             margin: 0 0;
         }
 
-        .GC_title{
+        .GC_title{ 
             width: 753px;
             height: 35vw;
             min-height: 450px;
@@ -60,4 +60,13 @@
 
 
     }
+}
+
+@media screen and (max-width: 1280px) {
+    .background_title{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    
 }
