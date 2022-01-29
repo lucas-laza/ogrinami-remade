@@ -1,0 +1,224 @@
+
+
+.cursor{
+    background-image: url("grass.png");
+    position: absolute;
+    width: calc(20px + 1.5rem);
+    height: calc(20px + 1.5rem);
+    z-index: 1000;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    pointer-events: none;
+}
+
+.game{
+    cursor: none;
+}
+
+
+.clicker_container{
+    display: grid;
+    grid-template: auto auto auto auto / auto;
+    grid-template-areas: "info""svg""items""upg";
+
+    max-height: 100vh;
+    gap:0;
+}
+
+.info{
+    grid-area: info;
+}
+
+svg{
+    grid-area: svg;
+    width: 100vw;
+    height: 100vw;
+    max-width: 50vh;
+    max-height: 50vh;
+    justify-self: center;
+}
+
+
+
+.clicker{
+    z-index: 5;
+    position: absolute;
+    transform-origin: center;
+}
+
+.fume{
+    position: absolute;
+    z-index: 2;
+}
+
+.items{
+    grid-area: items;
+    min-height: 10vh;
+    background-color: rgb(106, 106, 128);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.items .i1{
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    min-height: 7vh;
+    height: fit-content;
+}
+
+.items .i2{
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr;
+    min-height: 7vh;
+    height: fit-content;
+}
+
+.upgrades{
+    grid-area: upg;
+    min-height: 100%;
+    height: fit-content;
+    width: 100%;
+    min-height: 25vh;
+
+    background-color: rgb(219, 99, 213);
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+}
+
+.upgrades div{
+    width: 100%;
+    height: 100%;
+}
+
+
+.upgrades .upgain{
+    
+    background-color: rgb(255, 237, 75);
+}
+
+.upgrades .upclick{
+    
+    background-color: chartreuse;
+}
+
+.upgrades .upbuche{
+    
+    background-color: rgb(233, 166, 23);
+}
+
+
+
+.gain{
+    
+    background-color: rgb(226, 213, 204);
+    order: 1;
+}
+
+.click{
+  
+    background-color: rgb(238, 199, 171);
+    order: 2;
+}
+
+.upgrades .upmine{
+    
+    background-color: rgb(88, 71, 33);
+    color: cornsilk;
+}
+
+.upgrades .upusine{
+    
+    background-color: rgb(199, 31, 31);
+}
+
+.upgrades .uppetrole{
+    
+    background-color: rgb(16, 8, 34);
+    color: white;
+}
+
+.buche{
+    
+    background-color: chocolate;
+    order: 1;
+    
+}
+
+.mine{
+    
+    background-color: rgb(90, 51, 23);
+    order: 2;
+    color: rgb(231, 216, 157);
+    
+}
+
+.usine{
+    background-color: rgb(34, 34, 33);
+    order: 3;
+    color: crimson;
+}
+
+.petrole{
+    background-color: rgb(42, 0, 46);
+    order: 4;
+    color: wheat;
+}
+
+
+.param{
+   height: fit-content;
+   min-height: 10vh; 
+   background-color: rgb(141, 141, 141);
+   display: grid;
+}
+
+.param div{
+    align-self: center;
+    justify-self: center;
+    color: blueviolet;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.param div:hover{
+    text-decoration: blueviolet solid underline;
+    cursor: pointer;
+}
+
+
+@media screen and (orientation: landscape) {
+
+    body{
+        display: grid;
+    }
+    .clicker_container{
+        display: grid;
+        grid-template: auto auto auto / auto auto;
+        grid-template-areas: "svg info""svg items""svg upg";
+    
+        max-height: 100vh;
+        gap:0;
+
+        align-self: center;
+        width: 100%;
+        height: 100%;
+        /* justify-self: center; */
+
+        margin: auto auto;
+    }
+
+    svg{
+        width: 100vh;
+        height: 100vh;
+        max-width: 60vw;
+        max-height: 60vw;
+        justify-self: center;
+    }
+}
+
+

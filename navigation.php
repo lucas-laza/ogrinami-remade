@@ -10,15 +10,17 @@
                     </form>
                 </div>
             
-                <a href="accueil.php"><?php if($_SESSION["lang"] == "FR"){ echo "Accueil"; } else if($_SESSION["lang"] == "EN"){echo "Home";} ?></a>
+                <a href="index.php"><?php if($_SESSION["lang"] == "FR"){ echo "Accueil"; } else if($_SESSION["lang"] == "EN"){echo "Home";} ?></a>
             
 
             
                 <a href="articles.php"><?php if($_SESSION["lang"] == "FR"){ echo "Articles"; } else if($_SESSION["lang"] == "EN"){echo "Articles";} ?></a>
+
+                <a href="quizes.php"><?php if($_SESSION["lang"] == "FR"){ echo "Les quiz"; } else if($_SESSION["lang"] == "EN"){echo "Quizes";} ?></a>
             
 
             
-                <a href=""><?php if($_SESSION["lang"] == "FR"){ echo "Mini-jeux"; } else if($_SESSION["lang"] == "EN"){echo "Mini games";} ?></a>
+                <a href="games/planetClicker/"><?php if($_SESSION["lang"] == "FR"){ echo "Mini-jeux"; } else if($_SESSION["lang"] == "EN"){echo "Mini games";} ?></a>
             
 
             

@@ -1,3 +1,5 @@
+
+
 <div class="header">
 <?php
 // $article = $_GET["id"] ;
@@ -20,6 +22,6 @@ if (!isset($_SESSION["lang"])){
 
     
     
-<img class="logo" src="img/logoBmoche.png" alt="">
+<div class="logo"><img src="img/ogrinami-logo-white.svg" alt=""><a href="index.php"></a></div>
 <?php require "menu.php"; ?>
 </div>

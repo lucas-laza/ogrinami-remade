@@ -1,9 +1,9 @@
-.quizz_container{
+.quiz_container{
     width: 100vw;
     height: 100vh;
     display: grid;
 
-    .quizz{
+    .quiz{
         align-self: center;
         justify-self: flex-end;
         height: calc(100% - 100px);
@@ -72,8 +72,8 @@
 }
 
 @media screen and (min-width:768px) {
-    .quizz_container{
-        .quizz{
+    .quiz_container{
+        .quiz{
             height: 75%;
             width: 75vw;
             justify-self: center;
@@ -83,13 +83,13 @@
     }
 }
 
-.quizzstart_container{
+.quizstart_container{
     height: fit-content;
     min-height: 80vh;
     width: 100vw;
     display: grid;
 
-    .quizzstart{
+    .quizstart{
         height: calc(100% - 100px);
         width: 100%;
         align-self: flex-end;
@@ -118,8 +118,8 @@
 
 
 @media screen and (min-width:768px) {
-    .quizzstart_container{
-        .quizzstart{
+    .quizstart_container{
+        .quizstart{
             height: 75%;
             width: 75vw;
             justify-self: center;
@@ -130,13 +130,13 @@
     }
 }
 
-.finquizz_container{
+.finquiz_container{
     height: fit-content;
     min-height: 80vh;
     width: 100vw;
     display: grid;
 
-    .finquizz{
+    .finquiz{
         height: calc(100% - 100px);
         width: 100%;
         align-self: flex-end;
@@ -173,8 +173,8 @@
 
 
 @media screen and (min-width:768px) {
-    .finquizz_container{
-        .finquizz{
+    .finquiz_container{
+        .finquiz{
             height: 75%;
             width: 75vw;
             justify-self: center;
