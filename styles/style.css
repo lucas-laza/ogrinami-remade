@@ -17,7 +17,10 @@ body {
   display: grid;
 }
 .header .logo {
+  display: grid;
+  justify-content: flex-start;
   height: 60px;
+  width: 60px;
   position: absolute;
   margin: 10px;
   transition: ease-in-out 0.2s;
@@ -1008,14 +1011,17 @@ body {
   opacity: 0.9;
 }
 .home .terre .bouton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   justify-self: center;
   align-self: flex-end;
   display: grid;
   width: 60%;
+  max-height: 8vh;
   min-height: 12vh;
   height: fit-content;
-  padding: 5%;
   background-color: #34801B;
   font-family: "atma";
   color: #ffffff;
@@ -1023,9 +1029,8 @@ body {
   border-radius: 5vh;
 }
 .home .terre .bouton div {
+  max-height: 10vh;
   text-align: center;
-  justify-self: center;
-  align-self: center;
   font-family: "atma";
   font-size: calc(0.8rem + 1.5vw);
 }
@@ -1041,7 +1046,6 @@ body {
   display: grid;
   font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
   height: fit-content;
-  max-height: 10vh;
   min-height: 10vh;
   font-size: calc(5vw + 0.4rem);
 }
@@ -1049,6 +1053,7 @@ body {
   align-self: center;
   justify-self: center;
   background-color: #34801B;
+  max-height: 10vh;
   padding: 10px;
   border-radius: 20px;
 }

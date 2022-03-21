@@ -16,7 +16,10 @@ body{
     
 
     .logo{
+        display: grid;
+        justify-content: flex-start;
         height: 60px;
+        width: 60px;
         position: absolute;
         margin: 10px;
         transition: ease-in-out 0.2s;

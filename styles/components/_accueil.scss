@@ -41,14 +41,17 @@
 
 
         .bouton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: absolute;
             justify-self: center;
             align-self: flex-end;
             display: grid;
             width: 60%;
+            max-height: 8vh;
             min-height: 12vh;
             height: fit-content;
-            padding: 5%;
             
 
             background-color: #34801B;
@@ -61,9 +64,8 @@
             border-radius: 5vh;
 
             div {
+                max-height: 10vh;
                 text-align: center;
-                justify-self: center;
-                align-self: center;
                 font-family: "atma";    
                 font-size: calc(0.8rem + 1.5vw);
             }
@@ -91,7 +93,6 @@
             display: grid;
             font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
             height: fit-content;
-            max-height: 10vh;
             min-height: 10vh;
             font-size: calc(5vw + 0.4rem);
             
@@ -102,10 +103,9 @@
                 align-self: center;
                 justify-self: center;
                 background-color: #34801B;
+                max-height: 10vh;
                 padding: 10px;
                 border-radius: 20px;
-                
-                
                 
             }
         }
@@ -157,11 +157,13 @@
                 }
 
                 .bouton {
+                    
                     min-height: 20%;
                     height: fit-content;
                     border-radius: 2.5vh;
                     background:#604ED0;
                     display: grid;
+                    
                     
 
 
