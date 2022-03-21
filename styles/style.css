@@ -1,16 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Atma:wght@600&family=Quicksand&family=Sniglet&display=swap");
+body {
+  overflow: overlay;
+}
+
 .header {
-  background-color: #71db0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6FB32B;
   position: fixed;
   z-index: 4;
-  height: 90px;
+  height: 70px;
   width: 100vw;
+  margin: 10px;
+  border-radius: 10px;
   display: grid;
 }
 .header .logo {
-  height: 70px;
-  margin: 8px 3vw;
+  height: 60px;
   position: absolute;
+  margin: 10px;
+  transition: ease-in-out 0.2s;
+}
+.header .logo:hover {
+  transform: scale(0.92);
 }
 .header .logo img {
   width: 100%;
@@ -63,11 +76,18 @@ footer {
   width: 75%;
   margin: auto;
   cursor: pointer;
-  background-color: #59ac67;
+  background-color: #34801B;
+  border-radius: 10px;
+  transition: ease-in-out 0.3s;
+}
+.langswitch form div label:hover {
+  color: black;
+  background-color: #ffffff;
 }
 .langswitch form div .activeLang {
   color: black;
-  background-color: white;
+  background-color: #ffffff;
+  cursor: default;
 }
 .langswitch form div input {
   display: none;
@@ -76,14 +96,15 @@ footer {
 .navigation {
   display: grid;
   grid-template: 55px repeat(6, 1fr) 6vh/1fr;
-  grid-row-gap: 5vh;
+  grid-row-gap: 3vh;
   position: fixed;
+  top: 0;
   right: -100vw;
   width: 100vw;
   height: 100vh;
   font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
   transition: ease 0.5s;
-  background-color: #31a845;
+  background-color: #6FB32B;
 }
 .navigation a {
   display: flex;
@@ -91,14 +112,14 @@ footer {
   align-items: center;
   width: 100%;
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   font-size: 1.5rem;
   transition: ease 0.5s;
 }
 .navigation a:hover {
-  font-size: 1.6rem;
   transition: ease 0.3s;
-  background-color: #93f1a0;
+  background-color: white;
+  color: #34801B;
 }
 .navigation .nav-active {
   color: #7ddd8a;
@@ -120,7 +141,6 @@ footer {
 
 #trigger {
   position: absolute;
-  top: 45px;
   right: 5vw;
   transform: translate(0, -50%);
   z-index: 5;
@@ -133,12 +153,16 @@ footer {
 #trigger #burger {
   width: 35px;
   height: 5px;
-  background-color: white;
+  background-color: #ffffff;
   z-index: 6;
   display: flex;
   align-self: center;
   justify-self: center;
   cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+#trigger #burger:hover {
+  transform: scale(0.92);
 }
 
 #menu:checked ~ .navigation {
@@ -163,7 +187,7 @@ body {
   position: relative;
   width: 35px;
   height: 5px;
-  background-color: white;
+  background-color: #ffffff;
   top: 50%;
   left: 50%;
   z-index: 6;
@@ -175,7 +199,7 @@ body {
   position: relative;
   width: 35px;
   height: 5px;
-  background-color: white;
+  background-color: #ffffff;
   top: 25%;
   left: 50%;
   z-index: 6;
@@ -196,43 +220,20 @@ body {
   overflow: hidden;
 }
 
-/* Works on Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #7FC50E d #2e78bd;
-}
-
-/* Works on Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 12px;
-}
-
-*::-webkit-scrollbar-track {
-  background: #337e08;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #7FC50E;
-  border-radius: 20px;
-  border: 3px solid #000000;
-}
-
 @media screen and (min-width: 768px) {
   .navigation {
     width: 40vw;
     right: -40vw;
+    top: unset;
   }
 
-  .header {
-    height: 75px;
-  }
-  .header .logo {
+  .logo {
     height: 60px;
     margin: 8px 1vw;
   }
 
   #trigger {
-    top: 37.5px;
+    right: 3vw;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -240,13 +241,13 @@ body {
     width: 30vw;
     right: -30vw;
   }
+
+  #trigger {
+    right: 2vw;
+  }
 }
 * {
   box-sizing: border-box;
-}
-
-.header {
-  background-color: #16ABFC;
 }
 
 .texte_t {
@@ -830,7 +831,7 @@ body {
     margin-right: 15px;
   }
 }
-.quizz_container {
+.quiz_container {
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -972,14 +973,13 @@ body {
   }
 }
 .home {
-  padding-top: 90px;
   height: fit-content;
   width: 100vw;
   display: grid;
 }
 .home .terre {
   width: 100vw;
-  height: 73.5vh;
+  height: 100vh;
   position: relative;
   background-color: #222272;
   display: grid;
@@ -990,14 +990,15 @@ body {
 }
 .home .terre .titres {
   position: absolute;
-  top: 2%;
+  top: 15%;
   left: 5%;
 }
-.home .terre .titres h1, .home .terre .titres h2 {
+.home .terre .titres h1,
+.home .terre .titres h2 {
   margin: 0;
   padding: 0;
   font-family: "atma";
-  color: white;
+  color: #ffffff;
 }
 .home .terre .titres h1 {
   font-size: calc(0.3rem + 8vw);
@@ -1011,31 +1012,32 @@ body {
   justify-self: center;
   align-self: flex-end;
   display: grid;
-  width: 80%;
+  width: 60%;
+  min-height: 12vh;
   height: fit-content;
   padding: 5%;
-  background-color: #86ed258c;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #BFD975;
+  background-color: #34801B;
+  font-family: "atma";
+  color: #ffffff;
   margin-bottom: 10%;
-  border-radius: 10vh;
+  border-radius: 5vh;
 }
 .home .terre .bouton div {
+  text-align: center;
   justify-self: center;
   align-self: center;
-  font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: calc(0.3rem + 3vw);
+  font-family: "atma";
+  font-size: calc(0.8rem + 1.5vw);
 }
 .home .rubriques {
   height: fit-content;
   min-height: 250vh;
-  background: linear-gradient(180deg, #32B878 34.13%, #409b7a 100%);
   display: grid;
   grid-template: auto 1fr/1fr;
 }
 .home .rubriques .titre {
-  background-color: black;
-  color: white;
+  margin-top: 50px;
+  color: #ffffff;
   display: grid;
   font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
   height: fit-content;
@@ -1045,6 +1047,9 @@ body {
 .home .rubriques .titre div {
   align-self: center;
   justify-self: center;
+  background-color: #34801B;
+  padding: 10px;
+  border-radius: 20px;
 }
 .home .rubriques .liste {
   height: fit-content;
@@ -1056,14 +1061,19 @@ body {
 }
 .home .rubriques .liste .rubrique {
   height: 65vh;
-  background-color: #cffe96ce;
+  -webkit-box-shadow: 0px 5px 28px 5px rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 5px 28px 5px rgba(0, 0, 0, 0.55);
+  background-color: #9CF15A;
   padding: 5vw;
   border-radius: 5vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: black 6px solid;
   position: relative;
+  transition: ease-in-out 0.3s;
+}
+.home .rubriques .liste .rubrique:hover {
+  transform: scale(0.98);
 }
 .home .rubriques .liste .rubrique a {
   position: absolute;
@@ -1079,28 +1089,23 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 2.5vh;
-  border: black 6px solid;
 }
 .home .rubriques .liste .rubrique .bouton {
   min-height: 20%;
   height: fit-content;
   border-radius: 2.5vh;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.128) 50.31%, rgba(0, 0, 0, 0.172) 100%), linear-gradient(0deg, #604ED0, #604ED0);
+  background: #604ED0;
   display: grid;
-  border: black 6px solid;
 }
 .home .rubriques .liste .rubrique .bouton div {
   justify-self: center;
   align-self: center;
-  color: white;
+  color: #ffffff;
   font-family: "atma";
   font-size: calc(0.2rem + 8vw);
 }
 
 @media screen and (min-width: 768px) and (orientation: portrait) {
-  .home {
-    padding-top: 60px;
-  }
   .home .terre .titres h1 {
     font-size: calc(0.7rem + 5vw);
   }
@@ -1114,16 +1119,13 @@ body {
   }
 }
 @media screen and (min-width: 768px) and (orientation: landscape) {
-  .home {
-    padding-top: 60px;
-  }
   .home .terre {
     background-image: url("../img/accueil/terreTablette.jpg");
     background-position: bottom right;
     min-height: 540px;
   }
   .home .terre .titres {
-    top: 5%;
+    top: 15%;
   }
   .home .terre .titres h1 {
     font-size: calc(0.5rem + 4vw);
@@ -1150,7 +1152,7 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .home .terre {
-    height: 85vh;
+    height: 100vh;
     min-height: 525px;
     background-image: url("../img/accueil/terrePC.jpg");
     background-position: bottom right;
@@ -1194,7 +1196,7 @@ body {
   height: fit-content;
   position: relative;
   font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
-  background: linear-gradient(141.11deg, #41BDEC 0%, #ad2cdb 92.73%);
+  background: white;
   display: grid;
 }
 .listeArticles div h1 {
@@ -1223,10 +1225,15 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border: black 6px solid;
   border-radius: 6vh;
+  -webkit-box-shadow: 0px 5px 28px 5px rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 5px 28px 5px rgba(0, 0, 0, 0.55);
   display: grid;
   position: relative;
+  transition: ease-in-out 0.3s;
+}
+.listeArticles .liste .listchild:hover {
+  transform: scale(0.98);
 }
 .listeArticles .liste .listchild a {
   position: absolute;
@@ -1238,7 +1245,6 @@ body {
   color: white;
   width: fit-content;
   height: fit-content;
-  -webkit-text-stroke: black 1px;
   justify-self: center;
 }
 .listeArticles .liste .listchild h2 {
@@ -1247,7 +1253,6 @@ body {
   color: white;
   width: fit-content;
   height: fit-content;
-  -webkit-text-stroke: black 1px;
   justify-self: center;
   align-self: flex-end;
 }
@@ -1265,7 +1270,6 @@ body {
   }
   .listeArticles .liste .listchild {
     border-radius: 5vh;
-    border: black 1vh solid;
   }
   .listeArticles .liste .listchild h1 {
     font-size: calc(50px + 1rem);
@@ -1280,7 +1284,7 @@ body {
   height: fit-content;
   position: relative;
   font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
-  background: linear-gradient(141.11deg, #41ec96 0%, #4c2cdb 92.73%);
+  background: white;
   display: grid;
 }
 .quizes div h1 {
@@ -1306,13 +1310,18 @@ body {
   height: 35vh;
   width: 90%;
   background-color: blueviolet;
+  -webkit-box-shadow: 0px 5px 28px 5px rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 5px 28px 5px rgba(0, 0, 0, 0.55);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border: black 6px solid;
   border-radius: 6vh;
   display: grid;
   position: relative;
+  transition: ease-in-out 0.3s;
+}
+.quizes .liste .listchild:hover {
+  transform: scale(0.98);
 }
 .quizes .liste .listchild a {
   position: absolute;
@@ -1324,7 +1333,6 @@ body {
   color: white;
   width: fit-content;
   height: fit-content;
-  -webkit-text-stroke: black 1px;
   justify-self: center;
 }
 .quizes .liste .listchild h2 {
@@ -1333,7 +1341,6 @@ body {
   color: white;
   width: fit-content;
   height: fit-content;
-  -webkit-text-stroke: black 1px;
   justify-self: center;
   align-self: flex-end;
 }
@@ -1351,7 +1358,6 @@ body {
   }
   .listeArticles .liste .listchild {
     border-radius: 5vh;
-    border: black 1vh solid;
   }
   .listeArticles .liste .listchild h1 {
     font-size: calc(50px + 1rem);
