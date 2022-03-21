@@ -1,104 +1,115 @@
-
-
-.home{
-
-    padding-top: 90px;
+.home {
+    
 
     height: fit-content;
     width: 100vw;
-display: grid;
+    display: grid;
 
-    .terre{
+    .terre {
         width: 100vw;
-        height: 73.5vh;
+        height: 100vh;
         position: relative;
-
         background-color: rgb(34, 34, 114);
         display: grid;
-
         background-image: url("../img/accueil/terreMobile.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
 
-        .titres{
+        .titres {
             position: absolute;
-            top: 2%;
+            top: 15%;
             left: 5%;
 
-            h1,h2{
+            h1,
+            h2 {
                 margin: 0;
                 padding: 0;
                 font-family: "atma";
-                color: white;
+                color: #ffffff;
             }
 
-            h1{
+            h1 {
                 font-size: calc(0.3rem + 8vw);
             }
 
-            h2{
+            h2 {
                 font-size: calc(0.1rem + 6vw);
                 opacity: 0.9;
             }
         }
 
 
-        .bouton{
+        .bouton {
             position: absolute;
             justify-self: center;
             align-self: flex-end;
             display: grid;
-            width: 80%;
+            width: 60%;
+            min-height: 12vh;
             height: fit-content;
             padding: 5%;
+            
 
-            background-color: #86ed258c;
+            background-color: #34801B;
             // opacity: 0.7;
 
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: #BFD975;
+            font-family: "atma";
+            color: #ffffff;
 
             margin-bottom: 10%;
-            border-radius: 10vh;
+            border-radius: 5vh;
 
-            div{
+            div {
+                text-align: center;
                 justify-self: center;
                 align-self: center;
-                font-family: "Quicksand",Verdana, Geneva, Tahoma, sans-serif;
-                font-size: calc(0.3rem + 3vw);
+                font-family: "atma";    
+                font-size: calc(0.8rem + 1.5vw);
             }
         }
 
-        
+
     }
 
-    .rubriques{
+    .rubriques {
 
         height: fit-content;
         min-height: 250vh;
-        background: linear-gradient(180deg, #32B878 34.13%, #409b7a 100%);
+        //
+        // mettre une image ici magueule
+        //
         display: grid;
         grid-template: auto 1fr / 1fr;
         
-        
 
-        .titre{
-            background-color: black;
-            color: white;
+
+
+        .titre {
+            margin-top: 50px;
+            color: #ffffff;
             display: grid;
             font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
             height: fit-content;
             min-height: 10vh;
             font-size: calc(5vw + 0.4rem);
+            
+            
+           
 
-            div{
+            div {
                 align-self: center;
                 justify-self: center;
+                background-color: #34801B;
+                padding: 10px;
+                border-radius: 20px;
+                
+                
+                
             }
         }
 
-        .liste{
+        .liste {
             height: fit-content;
             width: 100vw;
             padding: 15vh 5vw;
@@ -107,90 +118,89 @@ display: grid;
             flex-direction: column;
             gap: 10vh;
 
-            .rubrique{
+            .rubrique {
                 height: 65vh;
-                background-color: #cffe96ce;
+                -webkit-box-shadow: 0px 5px 28px 5px rgba(0,0,0,0.55); 
+                box-shadow: 0px 5px 28px 5px rgba(0,0,0,0.55);
+                background-color: #9CF15A;
                 padding: 5vw;
-
                 border-radius: 5vh;
-
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
-
-                border: black 6px solid;
-
                 position: relative;
-    
+                transition: ease-in-out 0.3s;
+                &:hover{
+                    transform: scale(0.98);
+                }
 
-        a{
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top:0;
-            left: 0;
-        }
 
-                .img{
+                a {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                }
+
+                .img {
                     height: 70%;
                     background-image: url("../img/accueil/article.png");
                     background-position: center;
                     background-size: cover;
-                    background-repeat: no-repeat;    
-                    border-radius: 2.5vh;  
+                    background-repeat: no-repeat;
+                    border-radius: 2.5vh;
                     
-                    border: black 6px solid;
+
+
                 }
 
-                .bouton{
+                .bouton {
                     min-height: 20%;
                     height: fit-content;
-                    border-radius: 2.5vh;  
-
-                    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.128) 50.31%, rgba(0, 0, 0, 0.172) 100%),
-linear-gradient(0deg, #604ED0, #604ED0);
-
+                    border-radius: 2.5vh;
+                    background:#604ED0;
                     display: grid;
-
-                    border: black 6px solid;
                     
-                    div{
+
+
+                    div {
                         justify-self: center;
-                    align-self: center;
-                    color: white;
-                    font-family: "atma";
-                    font-size: calc(0.2rem + 8vw);
+                        align-self: center;
+                        color: #ffffff;
+                        font-family: "atma";
+                        font-size: calc(0.2rem + 8vw);
                     }
 
                 }
             }
         }
-                
+
     }
 
 
 }
 
 @media screen and (min-width:768px) and (orientation: portrait) {
-    .home{
+    .home {
 
-        padding-top: 60px;
 
-        .terre{
+        .terre {
 
             // background-image: url("../img/accueil/terreTablette.jpg");
             // background-position: bottom right;
 
-            .titres{
-                h1{
+            .titres {
+                h1 {
                     font-size: calc(0.7rem + 5vw);
                 }
-                h2{
+
+                h2 {
                     font-size: calc(0.6rem + 3.5vw);
                 }
             }
 
-            .bouton{
+            .bouton {
                 width: 60%;
                 padding: 3vw;
                 margin-bottom: 5%;
@@ -201,50 +211,52 @@ linear-gradient(0deg, #604ED0, #604ED0);
 }
 
 @media screen and (min-width:768px) and (orientation: landscape) {
-    .home{
+    .home {
 
-        padding-top: 60px;
+        
 
-        .terre{
+        .terre {
 
             background-image: url("../img/accueil/terreTablette.jpg");
             background-position: bottom right;
             min-height: 540px;
 
-            .titres{
-                top: 5%;
-                h1{
+            .titres {
+                top: 15%;
+
+                h1 {
                     font-size: calc(0.5rem + 4vw);
                 }
-                h2{
+
+                h2 {
                     font-size: calc(0.35rem + 3.5vw);
                 }
             }
 
-            .bouton{
+            .bouton {
                 margin-bottom: 3%;
                 margin-left: 5%;
                 min-width: 35%;
                 width: fit-content;
                 justify-self: flex-start;
 
-                div{
+                div {
                     font-size: calc(0.5rem + 2vw);
                 }
             }
         }
 
 
-        .rubriques{
+        .rubriques {
 
-            .liste{
-    
-                .rubrique{
+            .liste {
+
+                .rubrique {
                     height: 65vw;
 
-                    .bouton{
+                    .bouton {
 
-                        div{
+                        div {
                             font-size: calc(0.2rem + 5vw);
                         }
                     }
@@ -254,59 +266,59 @@ linear-gradient(0deg, #604ED0, #604ED0);
 
     }
 
-    
+
 }
 
 
 @media screen and (min-width: 1440px) {
-    
 
-    .home{
-        .terre{
-            height: 85vh;
 
+    .home {
+        .terre {
+            height: 100vh;
             min-height: 525px;
             background-image: url("../img/accueil/terrePC.jpg");
             background-position: bottom right;
             background-size: cover;
 
-            .titres{
-                h1{
+            .titres {
+                h1 {
                     font-size: calc(0.3rem + 4vw);
                 }
 
-                h2{
+                h2 {
                     font-size: calc(0.2rem + 3vw);
                 }
             }
 
-            .bouton{
+            .bouton {
                 min-width: 35%;
                 padding: 2% 5%;
             }
         }
 
-        .rubriques{
+        .rubriques {
             display: grid;
 
-            .titre{
+            .titre {
                 font-size: calc(0.5rem + 3.5vw);
             }
-            .liste{
+
+            .liste {
                 max-width: 1440px;
                 justify-self: center;
                 display: grid;
                 width: 65%;
 
-                .rubrique{
+                .rubrique {
                     justify-self: center;
                     width: 100%;
                     height: 80vh;
                     padding: 2vw;
 
-                    .bouton{
+                    .bouton {
 
-                        div{
+                        div {
                             font-size: calc(0.5rem + 3vw);
                         }
                     }
