@@ -49,7 +49,7 @@
             align-self: flex-end;
             display: grid;
             width: 60%;
-            max-height: 8vh;
+            max-height: 10vh;
             min-height: 12vh;
             height: fit-content;
             
@@ -68,6 +68,7 @@
                 text-align: center;
                 font-family: "atma";    
                 font-size: calc(0.8rem + 1.5vw);
+
             }
         }
 
@@ -103,7 +104,7 @@
                 align-self: center;
                 justify-self: center;
                 background-color: #34801B;
-                max-height: 10vh;
+                
                 padding: 10px;
                 border-radius: 20px;
                 
@@ -124,7 +125,7 @@
                 -webkit-box-shadow: 0px 5px 28px 5px rgba(0,0,0,0.55); 
                 box-shadow: 0px 5px 28px 5px rgba(0,0,0,0.55);
                 background-color: #9CF15A;
-                padding: 5vw;
+                padding: 4vh;
                 border-radius: 5vh;
                 display: flex;
                 flex-direction: column;
@@ -172,7 +173,7 @@
                         align-self: center;
                         color: #ffffff;
                         font-family: "atma";
-                        font-size: calc(0.2rem + 8vw);
+                        font-size: calc(0.2rem + 7vw);
                     }
 
                 }
@@ -253,14 +254,27 @@
         .rubriques {
 
             .liste {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                justify-self: center;
+                flex-wrap: wrap;
+                
+                min-height: 100vh;
+                width: 100vw;
+                padding: 10vh 3vw;
+    
+              
 
                 .rubrique {
-                    height: 65vw;
+                    height: 60vh;
+                    width: 40vw;
+                    
 
                     .bouton {
 
                         div {
-                            font-size: calc(0.2rem + 5vw);
+                            font-size: calc(0.5rem + 3vw);
                         }
                     }
                 }
@@ -296,7 +310,7 @@
 
             .bouton {
                 min-width: 35%;
-                padding: 2% 5%;
+            
             }
         }
 
@@ -308,21 +322,19 @@
             }
 
             .liste {
+        
                 max-width: 1440px;
-                justify-self: center;
-                display: grid;
-                width: 65%;
+                
 
                 .rubrique {
                     justify-self: center;
-                    width: 100%;
-                    height: 80vh;
+                    height: 70vh;
                     padding: 2vw;
 
                     .bouton {
 
                         div {
-                            font-size: calc(0.5rem + 3vw);
+                            font-size: calc(0.1rem + 2vw);
                         }
                     }
                 }
