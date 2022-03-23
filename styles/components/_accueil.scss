@@ -122,10 +122,7 @@
 
             .rubrique {
                 height: 65vh;
-                -webkit-box-shadow: 0px 5px 28px 5px rgba(0,0,0,0.55); 
-                box-shadow: 0px 5px 28px 5px rgba(0,0,0,0.55);
-                background-color: #9fe855;
-                padding: 4vh;
+               
                 border-radius: 5vh;
                 display: flex;
                 flex-direction: column;
@@ -152,8 +149,6 @@
                     background-size: cover;
                     background-repeat: no-repeat;
                     border-radius: 2.5vh;
-                    
-
 
                 }
 
@@ -329,7 +324,7 @@
                 .rubrique {
                     justify-self: center;
                     height: 70vh;
-                    padding: 2vw;
+                    
 
                     .bouton {
 
