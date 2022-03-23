@@ -32,7 +32,7 @@
                     // echo $idTexte;
                     // echo "<div class='listchild' style=\"background-image: url('http://www.ogrinami.com/img/quiz/$idR/1.jpg')\">";
                     echo "<div class='listchild'>";
-                    echo "<a href='quizz.php?id=$idQ'></a>";
+                    echo "<a href='quiz.php?id=$idQ'></a>";
                     echo "<h1>";
                     if ($_SESSION["lang"] == "FR"){echo $row["titre_quizz_FR"];}else if ($_SESSION["lang"] == "EN"){ echo $row["titre_quizz_EN"]; } 
                     echo "</h1>";

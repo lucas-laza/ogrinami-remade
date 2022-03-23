@@ -6,32 +6,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Ogrinami</title>
+    <title>Document</title>
     <script src="d3.js"></script>
 
     <style>
         body {
             margin: 0;
+            display: grid;
         }
     </style>
 </head>
 
 <body>
+<div class="victoryModale">
+    <div class="victory">
+        <h1>Tu as gagné !</h1>
+        <p>1 Milliard ! ça fait beaucoup, non ? En tout cas, tu as réussi !</p>
+        <h2>Mais à quel prix ?</h2>
+        <p>Les rivières se sont asséchées, les terres sont irradiées et tous les animaux ont été exterminés.</p>
+        <p>Mais tu es devenu riche ! C'est ça le principal.</p>
+        <p>Tu peux te féliciter.</p>
+        <div class="btn">Bravo, moi !</div>
+    </div>
+</div>
 
-    <div class="cursor"></div>
 
+<div class="pollutionModale">
+    <div class="pollutionPopup">
+        <h1>Pollution à <span>0%</span> !</h1>
+        <p>Info pas bien</p>
+        <div class="btn">Dommage..</div>
+    </div>
+</div>
+
+
+<div class="infoModale">
+
+    <div class="Param">
+        <div class="mute">Mettre la musique en pause ?</div>
+    </div>
+    
+        <div class="showInfo">
+            <div class="x closeInfo">
+                <img src="images/cross.svg" alt="">
+    
+            </div>
+    
+            <h2>Bonjour jeune entrepreneur, tu veux avoir de l'argent ?</h2>
+            <p>Rien de plus simple ! Exploite les ressources de la Terre pour t'enrichir !</p>
+            <h2>Comment ?</h2>
+            <p>Clique sur la Terre pour recevoir de l'argent. <span>Ton objectif est 1 MILLIARDS de $.</span></p>
+            <h2>Tu veux plus d'argent ?</h2>
+            <p>Avec ton argent, achète des améliorations pour avoir encore plus d'argent !</p>
+            <p>Note : la plupart des améliorations génèrent de l'argent automatiquement.</p>
+            <div class="play closeInfo">Jouer !</div>
+        </div>
+        
+</div>
+
+<div class="cursor"></div>
     <div class="game">
         <div class="clicker_container">
-            <svg viewbox="0 0 100 100" style="background-color:rgb(209, 209, 209)">
+            <div class="pollu">
+                <h2>Pollution: <span>0%</span></h2>
+            </div>
+            <div class="infos">
+                <div class="money">
+                    Argent: 0
+                </div>
+                <div class="total">
+                    Score: 0
+                </div>
+                <div class="linkInfo" >
+                    Voir les règles
+                </div>
+            </div>
+            <svg viewbox="0 0 100 100" >
                 <defs>
                 </defs>
                 <g class="Gfume"></g>
-                <g class="Gclicker"></g>
+                <g class="Gclicker">
+                    <!-- <circle r="25" cx="50" cy="50" fill="blue" class="clicker"></circle> -->
+                    <image class="laTerre clicker" draggable="false" href="images/terre1.png" width="50" height="50" x="25" y="25"> </image>
+                </g>
+
+                <g>
+                    <text  y="95" x="5"  font-size="8">
+                        Click !
+                    </text>
+                </g>
             </svg>
             <div class="items">
-                <div class="i1"></div>
+                <div><h2>Vos améliorations</h2></div>
+                <div class="i1">
+                    <div class="gain">
+                        $ par click: 10
+                    </div>
+                </div>
                 <div class="i2"></div>
+                <div class="boutique"><h2>Boutique</h2></div>
             </div>
+            
             <div class="upgrades">
                 <div class="upgain"></div>
                 <div class="upclick"></div>
@@ -43,12 +118,20 @@
         </div>
     </div>
 
-    <div class="param"><div>Reset game</div></div>
+    <div class="reset"><div>Reset game</div></div>
+    <div class="credits">
+        <h1>Crédits:</h1>
+        <h2>Jeu développé par <a href="https://www.lazalucas.fr" target="_blank">Lucas Laza</a></h2>
+        <h2>Designs de <a href="https://www.corentinviry.fr" target="_blank">Corentin Viry</a></h2>
+        <h2>Musiques de <a href="https://www.linkedin.com/in/gabriel-pineiro-a3bb17203/" target="_blank">Gabriel Pineiro</a></h2>
+    </div>
 
+    
 
-
-
-
+    <script src="Click.js"></script>
+    <script src="changes.js"></script>
+    <script src="update_DOM.js"></script>
+    <script src="Batiment.js"></script>
     <script src="script.js"></script>
 </body>
 
