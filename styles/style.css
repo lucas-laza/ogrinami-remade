@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Atma:wght@600&family=Quicksand&family=Sniglet&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Atma:wght@600&family=Quicksand&family=Sniglet&display=swap");
 body {
   overflow: overlay;
 }
@@ -284,7 +283,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  border-radius: 0px;
+  border-radius: 20px;
   display: grid;
   grid-template-areas: 1fr/1fr;
 }
@@ -324,12 +323,13 @@ body {
   margin: 2vh 0;
 }
 .container .GC_intro .p {
-  background-color: #596BAB;
-  padding: 15px 5vw;
+  background-color: #2648c2;
+  padding: 35px 5vw;
   color: white;
   transform: rotate(-1.5deg);
   font-family: "Sniglet";
   font-size: 1.15rem;
+  text-align: justify;
   transform: rotate(1.5deg);
 }
 .container .GC_part1 {
@@ -352,11 +352,13 @@ body {
 .container .GC_part1 p {
   font-size: 1.15rem;
   color: white;
+  text-align: justify;
+  padding: 5px;
 }
 .container .GC_part1 .illus {
   width: 100%;
   height: 40vw;
-  background-color: #65898f;
+  background-color: #8BE1F4;
 }
 .container .GC_part1 .box_P {
   background-color: #76AFEF;
@@ -417,6 +419,7 @@ body {
 }
 .container .GC_part2 .BP_P3 {
   grid-area: texte_P3;
+  text-align: justify;
 }
 .container .GC_part2 .illus2 {
   grid-area: illus2;
@@ -426,6 +429,7 @@ body {
 }
 .container .GC_part2 .BP_P4 {
   grid-area: texte_P4;
+  text-align: justify;
 }
 .container .GC_part2 .pied {
   grid-area: pied;
@@ -433,6 +437,7 @@ body {
 .container .GC_part2 .pied h4 {
   margin: 0;
   padding: 0;
+  color: #2648c2;
 }
 .container .Recommandations {
   grid-area: recom;
@@ -474,7 +479,7 @@ body {
   position: absolute;
   bottom: 0;
   text-align: center;
-  background-color: rgba(19, 19, 19, 0.644);
+  background-color: #16ABFC;
   border-radius: 15px;
   backdrop-filter: blur(5px);
 }
@@ -493,8 +498,10 @@ body {
 .container .For_Parents h3 {
   margin: 0;
   padding: 1vh;
-  background-color: #313131;
+  background-color: #16ABFC;
   width: 100%;
+  color: white;
+  border-radius: 20px 20px 0px 0px;
 }
 .container .For_Parents .For_P_Container {
   width: 100%;
@@ -505,8 +512,9 @@ body {
 .container .For_Parents .For_P_Container .Asso {
   width: 100%;
   height: 50%;
-  background-color: darkblue;
+  background-color: #5d5deb;
   position: relative;
+  border-radius: 0px 0px 0px 20px;
 }
 .container .For_Parents .For_P_Container .Asso a {
   position: relative;
@@ -527,10 +535,14 @@ body {
   align-self: flex-end;
   justify-self: center;
 }
+.container .For_Parents .For_P_Container .Asso a .bouton:hover {
+  background-color: #7FC50E;
+}
 .container .For_Parents .For_P_Container .Shop {
   width: 100%;
   height: 50%;
   background-color: darkgoldenrod;
+  border-radius: 0px 0px 20px 0px;
 }
 .container .For_Parents .For_P_Container .Shop a {
   position: relative;
@@ -551,26 +563,38 @@ body {
   align-self: flex-end;
   justify-self: center;
 }
+.container .For_Parents .For_P_Container .Shop a .bouton:hover {
+  background-color: #7FC50E;
+}
 .container .Retour_Accueil {
   grid-area: retour;
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 30vh;
-  background-color: yellow;
+  background-color: #7FC50E;
   padding: 2%;
   margin: 15vh 0;
 }
 .container .Retour_Accueil .Grinouille {
-  width: 40%;
+  width: 100%;
   height: 100%;
   display: grid;
 }
 .container .Retour_Accueil .Grinouille .Grinouille_IMG {
-  background-color: yellowgreen;
+  background-color: #b6f552;
   width: 100px;
   height: 150px;
+  display: flex;
   justify-self: center;
+  align-self: center;
+}
+.container .Retour_Accueil .Grinouille .earth {
+  height: 50%;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   align-self: center;
 }
 .container .Retour_Accueil .Retour_T {
@@ -584,6 +608,7 @@ body {
 .container .Retour_Accueil .Retour_T a {
   display: grid;
   text-align: center;
+  text-decoration: none;
 }
 .container .Retour_Accueil .Retour_T a .bouton {
   background-color: royalblue;
@@ -593,15 +618,53 @@ body {
   max-width: 80%;
   justify-self: center;
 }
-.container .Retour_Accueil .Retour_T a .bouton p {
+.container .Retour_Accueil .Retour_T a .bouton:hover {
+  background-color: #6a89e7;
+}
+.container .Retour_Accueil .Retour_T a p {
   color: white;
   text-decoration: none;
   font-size: 1.3rem;
+}
+.container h3 {
+  font-family: "Atma";
+  font-size: 1.65rem;
+  color: white;
+}
+.container .ecout {
+  font-family: "atma";
+  font-weight: 600;
+}
+.container .audio {
+  width: 100%;
+  background-color: #6dccff;
+  display: grid;
+}
+.container audio {
+  grid-area: part1;
+  text-align: center;
+}
+.container audio::-webkit-media-controls-enclosure {
+  border-radius: 0px;
+  background-color: #16ABFC;
+}
+.container audio:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(2px 3px 3px #333);
+}
+.container audio:hover::-webkit-media-controls-enclosure {
+  border-radius: 0px;
+  background-color: #16ABFC;
 }
 
 .illus * {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.recom_date {
+  color: #456dfd;
 }
 
 @media screen and (min-width: 768px) {
