@@ -1,7 +1,13 @@
 @import "settings.scss";
 @import "./components/navigation";
 @import "./components/articles";
-@import "./components/quizz";
+@import "./components/quiz";
+@import "./components/accueil";
+@import "./components/listeArticles";
+@import "./components/listeQuiz";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@600&family=Quicksand&family=Sniglet&display=swap');
 
 *{
     box-sizing: border-box;

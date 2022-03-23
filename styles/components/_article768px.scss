@@ -6,6 +6,7 @@
 
         .GC_title{
             min-height: 35vw;
+            width: 95%;
         }
        .GC_part1{
            grid-template: repeat(4,auto) / 35% 65% ;
@@ -149,5 +150,16 @@
     
         // position: absolute;
         // bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .background_title{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .GC_title{
+        width: 97%;
     }
 }

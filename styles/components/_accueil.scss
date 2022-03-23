@@ -1,0 +1,339 @@
+.home {
+    
+
+    height: fit-content;
+    width: 100vw;
+    display: grid;
+
+    .terre {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        background-color: rgb(34, 34, 114);
+        display: grid;
+        background-image: url("../img/accueil/terreMobile.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .titres {
+            position: absolute;
+            top: 15%;
+            left: 5%;
+
+            h1,
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-family: "atma";
+                color: #ffffff;
+            }
+
+            h1 {
+                font-size: calc(0.3rem + 8vw);
+            }
+
+            h2 {
+                font-size: calc(0.1rem + 6vw);
+                opacity: 0.9;
+            }
+        }
+
+
+        .bouton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            justify-self: center;
+            align-self: flex-end;
+            display: grid;
+            width: 60%;
+            max-height: 10vh;
+            min-height: 12vh;
+            height: fit-content;
+            
+
+            background-color: #34801B;
+            // opacity: 0.7;
+
+            font-family: "atma";
+            color: #ffffff;
+
+            margin-bottom: 10%;
+            border-radius: 5vh;
+
+            div {
+                max-height: 10vh;
+                text-align: center;
+                font-family: "atma";    
+                font-size: calc(0.8rem + 1.5vw);
+
+            }
+        }
+
+
+    }
+
+    .rubriques {
+
+        height: fit-content;
+        min-height: 250vh;
+        //
+        // mettre une image ici magueule
+        //
+        display: grid;
+        grid-template: auto 1fr / 1fr;
+        
+
+
+
+        .titre {
+            margin-top: 50px;
+            color: #ffffff;
+            display: grid;
+            font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
+            height: fit-content;
+            min-height: 10vh;
+            font-size: calc(5vw + 0.4rem);
+            
+            
+           
+
+            div {
+                align-self: center;
+                justify-self: center;
+                background-color: #34801B;
+                
+                padding: 10px;
+                border-radius: 20px;
+                
+            }
+        }
+
+        .liste {
+            height: fit-content;
+            width: 100vw;
+            padding: 15vh 5vw;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10vh;
+
+            .rubrique {
+                height: 65vh;
+               
+                border-radius: 5vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                position: relative;
+                transition: ease-in-out 0.3s;
+                &:hover{
+                    transform: scale(0.98);
+                }
+
+
+                a {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                }
+
+                .img {
+                    height: 70%;
+                    background-image: url("../img/accueil/article.png");
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    border-radius: 2.5vh;
+
+                }
+
+                .bouton {
+                    
+                    min-height: 20%;
+                    height: fit-content;
+                    border-radius: 2.5vh;
+                    background:#604ED0;
+                    display: grid;
+                    
+                    
+
+
+                    div {
+                        justify-self: center;
+                        align-self: center;
+                        color: #ffffff;
+                        font-family: "atma";
+                        font-size: calc(0.2rem + 7vw);
+                    }
+
+                }
+            }
+        }
+
+    }
+
+
+}
+
+@media screen and (min-width:768px) and (orientation: portrait) {
+    .home {
+
+
+        .terre {
+
+            // background-image: url("../img/accueil/terreTablette.jpg");
+            // background-position: bottom right;
+
+            .titres {
+                h1 {
+                    font-size: calc(0.7rem + 5vw);
+                }
+
+                h2 {
+                    font-size: calc(0.6rem + 3.5vw);
+                }
+            }
+
+            .bouton {
+                width: 60%;
+                padding: 3vw;
+                margin-bottom: 5%;
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width:768px) and (orientation: landscape) {
+    .home {
+
+        
+
+        .terre {
+
+            background-image: url("../img/accueil/terreTablette.jpg");
+            background-position: bottom right;
+            min-height: 540px;
+
+            .titres {
+                top: 15%;
+
+                h1 {
+                    font-size: calc(0.5rem + 4vw);
+                }
+
+                h2 {
+                    font-size: calc(0.35rem + 3.5vw);
+                }
+            }
+
+            .bouton {
+                margin-bottom: 3%;
+                margin-left: 5%;
+                min-width: 35%;
+                width: fit-content;
+                justify-self: flex-start;
+
+                div {
+                    font-size: calc(0.5rem + 2vw);
+                }
+            }
+        }
+
+
+        .rubriques {
+
+            .liste {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                justify-self: center;
+                flex-wrap: wrap;
+                
+                min-height: 100vh;
+                width: 100vw;
+                padding: 10vh 3vw;
+    
+              
+
+                .rubrique {
+                    height: 60vh;
+                    width: 40vw;
+                    
+
+                    .bouton {
+
+                        div {
+                            font-size: calc(0.5rem + 3vw);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+
+}
+
+
+@media screen and (min-width: 1440px) {
+
+
+    .home {
+        .terre {
+            height: 100vh;
+            min-height: 525px;
+            background-image: url("../img/accueil/terrePC.jpg");
+            background-position: bottom right;
+            background-size: cover;
+
+            .titres {
+                h1 {
+                    font-size: calc(0.3rem + 4vw);
+                }
+
+                h2 {
+                    font-size: calc(0.2rem + 3vw);
+                }
+            }
+
+            .bouton {
+                min-width: 35%;
+            
+            }
+        }
+
+        .rubriques {
+            display: grid;
+
+            .titre {
+                font-size: calc(0.5rem + 3.5vw);
+            }
+
+            .liste {
+        
+                max-width: 1440px;
+                
+
+                .rubrique {
+                    justify-self: center;
+                    height: 70vh;
+                    
+
+                    .bouton {
+
+                        div {
+                            font-size: calc(0.1rem + 2vw);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

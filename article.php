@@ -5,22 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Document</title>
+    <title>Ogrinami</title>
 </head>
 <body>
 
 <?php
-
+session_unset();
 require "PDO.php";
 
-session_start();
-// unset($_SESSION["lang"]);
 
-// $_SESSION["lang"] = 0;
-
-if (!isset($_SESSION["lang"])){
-    $_SESSION["lang"] = "FR";
-}
 
 if (isset($_GET["id"])){
     $article = $_GET["id"];
@@ -30,14 +23,14 @@ if (isset($_GET["id"])){
 
 }
 
-$styleIMG1 = " background-image:url('http://www.ogrinami.com/img/article/$article/1.jpg');
+$styleIMG1 = " background-image:url('http://www.ogrinami.com/img/article/$article/1.webp');
         background-position: center;
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;";
 
-$styleIMG3 = " background-image:url('http://www.ogrinami.com/img/article/$article/3.jpg');
+$styleIMG3 = " background-image:url('http://www.ogrinami.com/img/article/$article/3.webp');
 background-position: center;
-background-size: cover;
+background-size: contain;
 background-repeat: no-repeat;";
 
 function includeWithVariables($filePath, $variables = array(), $print = true)
@@ -93,16 +86,21 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                         <div class="GC_intro">
 
                             <div>
+                                <h2 class="ecout">
                             <?php if($_SESSION["lang"] == "FR"){
-                                echo "Ecouter l'article ?" ;
+                                echo "Écouter l'article ?" ;
                             } else if ($_SESSION["lang"] == "EN"){
                                     echo "Listen to the article:";
                                 } ?>
+                                </h2>
                                 <br>
+
+                                <div class="audio">
                                 <audio controls>
                                     <source src="voixoff/<?php echo $_GET["id"]; ?>.mp3" type="audio/mpeg">
                                     <source src="voixoff/<?php echo $_GET["id"]; ?>.ogg" type="audio/ogg">
                                 </audio>
+                                </div>
                             </div>
 
                             <div class="p">
@@ -158,10 +156,12 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                         
                         
                             <picture class="illus illus1">
-                    <source srcset="img/article/<?php echo $_GET["id"]; ?>/2G.png" media="(min-width: 768px)" />
-                    <source srcset="img/article/<?php echo $_GET["id"]; ?>/2.png" media="(max-width: 767px)" />
-                    <img src="img/article/<?php echo $_GET["id"]; ?>/2.png" />
+                    <source srcset="img/article/<?php echo $_GET["id"]; ?>/2G.webp" media="(min-width: 768px)" />
+                    <source srcset="img/article/<?php echo $_GET["id"]; ?>/2.webp" media="(max-width: 767px)" />
+                    <img src="img/article/<?php echo $_GET["id"]; ?>/2.webp" />
                     </picture>
+
+                    <div class="illus illus1" style="background-image: url('img/article/<?=$_GET['id'];?>/2.webp')"></div>
                         <!-- <picture> </picture> -->
                         
 
@@ -232,12 +232,12 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
 
                         
                          <picture class="illus illus2">
-                    <source srcset="img/article/<?php echo $_GET["id"]; ?>/4G.png" media="(min-width: 768px)" />
-                    <source srcset="img/article/<?php echo $_GET["id"]; ?>/4.png" media="(max-width: 767px)" />
-                    <img src="img/article/<?php echo $_GET["id"]; ?>/4.png" />
+                    <source srcset="img/article/<?php echo $_GET["id"]; ?>/4G.webp" media="(min-width: 768px)" />
+                    <source srcset="img/article/<?php echo $_GET["id"]; ?>/4.webp" media="(max-width: 767px)" />
+                    <img src="img/article/<?php echo $_GET["id"]; ?>/4.webp" />
                     </picture>
 
-                          <!-- <img class="illus illus2" src="http://www.ogrinami.com/img/article/<?php echo $_GET["id"]; ?>/4.png" alt="<?php $result['alt_IMG4_E']?>" -->
+                          <!-- <img class="illus illus2" src="http://www.ogrinami.com/img/article/<?php echo $_GET["id"]; ?>/4.webp" alt="<?php $result['alt_IMG4_E']?>" -->
                         
                         
 
@@ -279,16 +279,19 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                         <h3>Pour les parents:</h3>
                         <div class="For_P_Container">
                             <div class="Asso">
-
+                  
                             <a href="parent.php">
+                                
                             <div class="bouton">Associations partenaires</div>
+                            <img src="img/article/1/2.webp" alt="">
                             </a>
                             
                             </div>
                             <div class="Shop">
-
+                          
                             <a href="shop.php">
                             <div class="bouton">Accéder à la boutique</div>
+                            <img src="img/article/1/2.webp" alt="">
                             </a>
                             </div>
                         </div>
@@ -305,9 +308,9 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                         <div class="Recommandations">
                         <div class="thumbnail">
                         <?php $idR = $result["ext_id_article_recom1_E"];
-                        $styleIMG_recom1 = "background-image: url('http://www.ogrinami.com/img/article/$idR/1.jpg');
+                        $styleIMG_recom1 = "background-image: url('http://www.ogrinami.com/img/article/$idR/1.webp');
                                             background-position: center;
-                                            background-size: cover;
+                                            background-size: contain;
                                             background-repeat: no-repeat;";?>
                             <a href="article.php?id=<?php echo $idR; ?>">
                             <div class='TB_BG' style="<?php echo $styleIMG_recom1;?>">
@@ -328,7 +331,7 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                             </div>
                             </a>
 
-                            <h4><?php
+                            <h4 class="recom_date" ><?php
                                      $stmt = $db->query("SELECT * FROM article_enfant WHERE $idR = id_article_E");
                                      $result = $stmt -> fetch(PDO::FETCH_ASSOC);
                                      $id = $result["ext_id_pays_E"];
@@ -342,9 +345,9 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                         </div>
                         <div class="thumbnail">
                         <?php $idR = $result["ext_id_article_recom2_E"];
-                        $styleIMG_recom2 = "background-image: url('http://www.ogrinami.com/img/article/$idR/1.jpg');
+                        $styleIMG_recom2 = "background-image: url('http://www.ogrinami.com/img/article/$idR/1.webp');
                                             background-position: center;
-                                            background-size: cover;
+                                            background-size: contain;
                                             background-repeat: no-repeat;";?>
                             <a href="article.php?id=<?php echo $idR; ?>">
                             <div class='TB_BG' style="<?php echo $styleIMG_recom2;?>">
@@ -365,7 +368,7 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                             </div>
                             </a>
 
-                            <h4><?php
+                            <h4 class="recom_date"><?php
                                      $stmt = $db->query("SELECT * FROM article_enfant WHERE $idR = id_article_E");
                                      $result = $stmt -> fetch(PDO::FETCH_ASSOC);
                                      $id = $result["ext_id_pays_E"];
@@ -379,9 +382,9 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                         </div>
                         <div class="thumbnail">
                         <?php $idR = $result["ext_id_article_recom3_E"];
-                        $styleIMG_recom3 = "background-image: url('http://www.ogrinami.com/img/article/$idR/1.jpg');
+                        $styleIMG_recom3 = "background-image: url('http://www.ogrinami.com/img/article/$idR/1.webp');
                                             background-position: center;
-                                            background-size: cover;
+                                            background-size: contain;
                                             background-repeat: no-repeat;";?>
                             <a href="article.php?id=<?php echo $idR; ?>">
                             <div class='TB_BG' style="<?php echo $styleIMG_recom3;?>">
@@ -403,7 +406,7 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                             </div>
                             </a>
 
-                            <h4><?php
+                            <h4 class="recom_date"><?php
                                      $stmt = $db->query("SELECT * FROM article_enfant WHERE $idR = id_article_E");
                                      $result = $stmt -> fetch(PDO::FETCH_ASSOC);
                                      $id = $result["ext_id_pays_E"];
@@ -422,7 +425,9 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
 
                         <div class="Retour_Accueil">
                             <div class="Grinouille">
-                                <div class="Grinouille_IMG"></div>
+                                <div class="Grinouille_IMG">
+                                <img class="earth" src="img/article/1/earth.webp" alt="">
+                                </div>
                             </div>
                             <div class="Retour_T">
                                 <div>
@@ -450,6 +455,10 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                 
 
         </div>
+
+        <script>
+            let id = <?= $_GET["id"]; ?>;
+        </script>
     
 </body>
 </html>

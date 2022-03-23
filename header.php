@@ -1,12 +1,27 @@
+
+
 <div class="header">
 <?php
-$article = $_GET["id"] ;
+// $article = $_GET["id"] ;
+
+// session_start();
+// unset($_SESSION["lang"]);
+
+// $_SESSION["lang"] = 0;
+
+session_unset();
+session_start();
+
+if (!isset($_SESSION["lang"])){
+    $_SESSION["lang"] = "FR";
+}
 
 
 ?>
 
+
     
     
-<img class="logo" src="img/logoBmoche.png" alt="">
+<div class="logo"><img src="img/ogrinami-logo-white.svg" alt=""><a href="index.php"></a></div>
 <?php require "menu.php"; ?>
 </div>

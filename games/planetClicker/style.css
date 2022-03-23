@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@600&family=Quicksand&family=Sniglet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    cursor: none;
+}
+
+.cursor{
+    background-image: url("images/pointers/grass.png");
+    position: absolute;
+    width: calc(20px + 1.5rem);
+    height: calc(20px + 1.5rem);
+    z-index: 1000;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    pointer-events: none;
+}
+
+
+
+
+.clicker_container{
+    display: grid;
+    grid-template: auto auto auto auto auto / auto;
+    grid-template-areas: "info""pollu""svg""items""upg";
+
+    min-height: 100vh;
+    gap:0;
+}
+
+
+.infos div{
+   padding: 1vw;
+   font-size: calc(2vmax + 0.5rem);
+
+    font-family: 'Sniglet', sans-serif;
+    height: fit-content;
+}
+.money{
+    background-color :#0a0036;
+    color: rgb(255, 229, 80);
+    
+}
+
+.total{
+    background-color: #274aaa;
+}
+
+.infos .linkInfo{
+    font-family: 'Quicksand';
+    font-size: calc(8% + 1rem);
+}
+
+.infos .linkInfo:hover{
+    background-color: beige;
+    transition: ease 0.2s;
+    text-decoration: solid black 2px;
+}
+
+.infos{
+    grid-area: info;
+    height: fit-content;
+}
+
+.pollu{
+    grid-area: pollu;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    min-height: 5vh;
+
+
+
+    background-color: deepskyblue;
+    display: grid;
+}
+
+.pollu h2{
+    margin: 0;
+    align-self: center;
+    justify-self: center;
+}
+
+svg{
+    grid-area: svg;
+    width: 100vw;
+    height: 100vw;
+    max-width: 50vh;
+    max-height: 50vh;
+    justify-self: center;
+
+    background-color: #401c7c;
+
+    position: relative;
+    /* display: grid; */
+
+    user-select: none;
+}
+
+
+.clicker{
+    z-index: 5;
+    position: absolute;
+    transform-origin: center;
+
+    -webkit-user-drag: none;
+    user-select: none;
+
+}
+
+.fume{
+    position: absolute;
+    z-index: 2;
+}
+
+.items{
+    grid-area: items;
+    min-height: 10vh;
+    background-color: rgb(106, 106, 128);
+    display: flex;
+    flex-direction: column;
+}
+
+.items h2{
+    font-family: 'Sniglet', sans-serif;
+    margin: 1vmin 0;
+    text-align: center;
+    width: 100%;
+}
+
+.items h2{
+    background-color: #170a2c;
+    color: wheat;
+}
+
+
+
+.items .i1{
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    min-height: 7vh;
+    height: fit-content;
+}
+
+.items .i2{
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr;
+    min-height: 7vh;
+    height: fit-content;
+}
+
+.upgrades{
+    grid-area: upg;
+    min-height: 100%;
+    height: fit-content;
+    width: 100%;
+    min-height: 25vh;
+
+    background-color: rgb(201, 143, 198);
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+}
+
+.upgrades div{
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(48, 48, 48);
+    color: rgb(206, 206, 206);
+
+    border: rgb(0, 0, 0) 3px solid;
+    padding: 3px;
+
+    transition: ease 0.05s;
+}
+
+.upgrades div:hover{
+    background-color: black;
+    color: white;
+    transition: ease 0.2s;
+    /* border: white 3px solid; */
+}
+
+
+/* .upgrades .upgain{
+    
+    background-color: rgb(255, 237, 75);
+}
+
+.upgrades .upclick{
+    
+    background-color: chartreuse;
+}
+
+.upgrades .upbuche{
+    
+    background-color: rgb(233, 166, 23);
+} */
+
+
+
+.gain{
+    
+    background: rgb(135,254,255);
+    background: linear-gradient(309deg, rgb(241, 213, 153) 0%, rgba(255,237,197,1) 85%); 
+    order: 1;
+
+    border: rgba(32, 32, 32, 0.815) solid 3px;
+    padding: 3px;
+
+    margin-left: 1vmax;
+}
+
+.click{
+  
+    background: rgb(156,140,116);
+    background: linear-gradient(135deg, rgba(156,140,116,1) 0%, rgb(63, 68, 94) 100%); 
+    order: 2;
+
+    border: rgba(32, 32, 32, 0.815) solid 3px;
+    padding: 3px;
+
+    margin-right: 1vmax;
+}
+
+/* .upgrades .upmine{
+    
+    background-color: rgb(88, 71, 33);
+    color: cornsilk;
+}
+
+.upgrades .upusine{
+    
+    background-color: rgb(199, 31, 31);
+}
+
+.upgrades .uppetrole{
+    
+    background-color: rgb(16, 8, 34);
+    color: white;
+} */
+
+.i2 div{
+    border: black 3px solid;
+    padding: 3px;
+}
+
+.buche{
+    
+    background: rgb(214,123,57);
+    background: linear-gradient(135deg, rgba(214,123,57,1) 28%, rgb(149, 146, 100) 100%); 
+    color: rgb(7, 58, 7);
+    order: 1;
+    
+}
+
+.mine{
+    
+    background: rgb(51,42,35);
+    background: linear-gradient(167deg, rgba(51,42,35,1) 45%, rgb(58, 40, 31) 100%); 
+    order: 2;
+    color: rgb(231, 217, 161);
+    
+}
+
+.usine{
+    background: rgb(204,13,13);
+    background: linear-gradient(14deg, rgba(204,13,13,1) 55%, rgba(255,0,0,1) 100%); 
+    order: 3;
+    color: rgb(255, 213, 96);
+}
+
+.usine a{
+    color: rgb(255, 213, 96) ;
+    
+}
+
+.usine a:hover{
+    cursor: none;
+    color: rgb(240, 188, 45);
+}
+
+.petrole{
+    background: rgb(42,0,46);
+    background: linear-gradient(219deg, rgba(42,0,46,1) 52%, rgba(13,0,20,1) 100%); 
+    order: 4;
+    color: wheat;
+}
+
+
+.reset{
+   height: fit-content;
+   min-height: 10vh; 
+   background-color: rgb(141, 141, 141);
+   display: grid;
+}
+
+.reset div{
+    align-self: center;
+    justify-self: center;
+    color: blueviolet;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.reset div:hover{
+    text-decoration: blueviolet solid underline;
+    cursor: pointer;
+}
+
+.victoryModale{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+
+    background-color: rgba(13, 107, 34, 0.658);
+    display: none;
+}
+
+.victory{
+    position: absolute;
+    z-index: 1000;
+
+    text-align: center;
+    background-color: rgb(7, 0, 46);
+    color: white;
+    padding: 3%;
+    border-radius: 3%;
+    font-family: 'Quicksand', sans-serif;
+
+    align-self: center;
+    justify-self: center;
+
+    
+}
+
+.victory h1,h2{
+    text-align: center;
+}
+.victory h1{
+    font-family: 'Sniglet', sans-serif;
+}
+.victory h2{
+    font-family: 'Nosifer';
+}
+
+
+
+.victory .btn{
+    min-width: fit-content;
+    text-align: center;
+    font-family: 'Sniglet', sans-serif;
+    width: 25%;
+    padding: 2%;
+    background-color: rgb(16, 218, 123);
+    border-radius: calc(2% + 1vmin);
+    margin: auto;
+    /* cursor: pointer; */
+}
+
+.victory .btn:hover{
+    font-family: 'Nosifer';
+    background-color: rgb(194, 37, 37);
+}
+/*  */
+
+
+.pollutionModale{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 50;
+
+    background-color: rgba(29, 29, 29, 0.61);
+    
+    display: none;
+}
+
+.pollutionPopup{
+    position: absolute;
+    z-index: 50;
+
+    text-align: center;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    padding: 3%;
+    border-radius: 3%;
+    font-family: 'Quicksand', sans-serif;
+
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+
+    
+}
+.pollutionPopup h1{
+    font-family: 'Sniglet', sans-serif;
+    
+}
+
+.pollutionModale span {
+    font-family: 'Nosifer';
+}
+.pollutionPopup p{
+    /*  */
+}
+
+
+
+.pollutionPopup .btn{
+    min-width: fit-content;
+    text-align: center;
+    font-family: 'Sniglet', sans-serif;
+    width: 25%;
+    padding: 2%;
+    background-color: rgb(231, 211, 26);
+    border-radius: calc(2% + 1vmin);
+    margin: auto;
+    /* cursor: pointer; */
+}
+
+.pollutionPopup .btn:hover{
+    background-color: rgb(214, 131, 23);
+}
+/*  */
+.infoModale{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+
+    background-color: rgba(54, 54, 54, 0.658);
+}
+
+.Param{
+    position: absolute;
+    justify-self: flex-start;
+    align-self: flex-start;
+    margin: 2vmin;
+    
+}
+
+.mute{
+    padding: 1vmin;
+    background-color: rgba(235, 215, 191, 0.568);
+}
+
+.mute:hover{
+    background-color: blanchedalmond;
+    /* cursor: pointer; */
+    transition: ease 0.15s;
+}
+
+.showInfo{
+    position: absolute;
+    z-index: 100;
+
+    background-color: antiquewhite;
+    padding: 3%;
+    border-radius: 3%;
+    font-family: 'Quicksand', sans-serif;
+
+    align-self: center;
+    justify-self: center;
+
+    
+}
+
+.showInfo h2{
+    font-family: 'Sniglet', sans-serif;
+}
+
+.showInfo .x{
+    height: 7vmin;
+    width: 7vmin;
+    background-color: rgb(212, 185, 149);
+    border-radius: calc(5% + 1vmin);
+
+    justify-self: flex-end;
+    display: none;
+
+    /* cursor: pointer; */
+    
+}
+
+.showInfo .x:hover{
+    background-color:rgb(211, 162, 98);
+}
+
+.showInfo .x img{
+    align-self: center;
+    justify-self: center;
+    width: 80%;
+    height: 80%;
+}
+
+.showInfo span{
+    font-family: 'Sniglet';
+}
+
+.showInfo .play{
+    min-width: fit-content;
+    text-align: center;
+    font-family: 'Sniglet', sans-serif;
+    width: 25%;
+    padding: 2%;
+    background-color: rgb(37, 194, 71);
+    border-radius: calc(2% + 1vmin);
+    margin: auto;
+    /* cursor: pointer; */
+}
+
+.showInfo .play:hover{
+    background-color: rgb(38, 224, 63);
+}
+
+.showInfo p:last-of-type{
+    opacity: 0.8;
+    font-style: italic;
+}
+
+.credits{
+    background-color: rgb(31, 31, 31);
+    padding: 5vmin;
+    display: grid;
+}
+
+.credits *{
+    color: white;
+    align-self: center;
+    justify-self: center;
+    width: fit-content;
+}
+
+.credits h1{
+    font-family: 'Sniglet', sans-serif;
+}
+.credits h2{
+    font-size: calc(0.5rem + 1vmax);
+    
+}
+
+.credits h2:nth-of-type(1) a:hover{
+    cursor: none;
+    color: rgb(247, 22, 255);
+}
+
+.credits h2:nth-of-type(2) a:hover{
+    cursor: none;
+    color: rgb(42, 240, 42);
+}
+
+.credits h2:last-child a:hover{
+    cursor: none;
+    color: rgb(255, 190, 13);
+}
+
+
+@media screen and (orientation: landscape) {
+
+    body{
+        display: grid;
+    }
+    .clicker_container{
+        display: grid;
+        grid-template: auto auto auto auto / auto auto;
+        grid-template-areas: "svg info""svg pollu""svg items""svg upg";
+    
+        min-height: 100vh;
+        gap:0;
+
+        align-self: center;
+        width: 100%;
+        height: 100%;
+        /* justify-self: center; */
+
+        margin: auto auto;
+    }
+
+    svg{
+        width: 100vh;
+        height: 100vh;
+        max-width: 60vw;
+        max-height: 60vw;
+        justify-self: center;
+    }
+
+    .pollu{
+        height: 100%;
+    }
+}
+
+

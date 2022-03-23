@@ -1,16 +1,44 @@
+body{
+    overflow: overlay;
+}
 .header{
-    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6FB32B;
     position: fixed;
     z-index: 4;
-    height: 90px;
+    height: 70px;
     width: 100vw;
-
+    margin: 10px;
+    border-radius: 10px;
     display: grid;
+    
 
     .logo{
-        height: 70px;
-        margin: 8px 3vw;
+        display: grid;
+        justify-content: flex-start;
+        height: 60px;
+        width: 60px;
         position: absolute;
+        margin: 10px;
+        transition: ease-in-out 0.2s;
+                &:hover{
+                    transform: scale(0.92);
+                }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+        a{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
     }
 
     
@@ -41,7 +69,7 @@ footer{
     align-self: center;
     width: 100%;
     justify-content: center;
-        align-content: center;
+    align-content: center;
     
 
     form{
@@ -73,13 +101,22 @@ footer{
 
     
                 cursor: pointer;
-                background-color: #59ac67;
-
+                background-color: #34801B;
+                border-radius: 10px;
+                transition: ease-in-out 0.3s;
+                &:hover{
+                    color: rgb(0, 0, 0);
+                    background-color: #ffffff;
+               
+                }
                 
             }
             .activeLang{
                 color: rgb(0, 0, 0);
-                background-color: white;
+                background-color: #ffffff;
+                cursor: default;
+               
+                
                 
             }
 
@@ -94,16 +131,19 @@ footer{
 
 .navigation {
     display: grid;
-    grid-template: 55px repeat(5, 1fr) 6vw / 1fr;
-    grid-row-gap: 5vh;
+    grid-template: 55px repeat(6, 1fr) 6vh / 1fr;
+    grid-row-gap: 3vh;
     position: fixed;
+    top: 0;
     right: -100vw;
     width: 100vw;
     height: 100vh;
 
-    transition: ease 0.5s;
+    font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
+    // font-family: "Quicksand";
 
-    background-color: rgb(49, 168, 69);
+    transition: ease 0.5s;
+    background-color: #6FB32B;
 
     a {
         display: flex;
@@ -112,16 +152,17 @@ footer{
 
         width: 100%;
         text-decoration: none;
-        color: white;
+        color: #ffffff;
         font-size: 1.5rem;
 
         transition: ease 0.5s;
 
         &:hover {
-            font-size: 1.6rem;
+            
             transition: ease 0.3s;
+            background-color:rgb(255, 255, 255);
+            color: #34801B;
 
-            background-color:rgb(147, 241, 160) ;
         }
     }
 
@@ -162,29 +203,27 @@ footer{
 
    
     position: absolute;
-    top: 45px;
     right: 5vw;
     transform: translate(0,-50%);
-
-
     z-index: 5;
     display: grid;
     grid-template: 25% repeat(3,1fr) 25% / 1fr;
-
     width: 55px;
     height: 55px;
+    
 
-    background-color: rgb(49, 168, 69);
-    border-radius: 50%;
+    
 
+    
     cursor: pointer;
+   
 
     #burger {
 
 
         width: 35px;
         height: 5px;
-        background-color: rgb(147, 241, 160);
+        background-color: #ffffff;
 
         z-index: 6;
         display: flex;
@@ -192,6 +231,9 @@ footer{
         align-self: center;
         justify-self: center;
         cursor: pointer;
+        transition: ease-in-out 0.2s;
+                
+        
 
 
     }
@@ -225,8 +267,7 @@ body{
     width: 55px;
     height: 55px;
 
-    background-color:  rgb(147, 241, 160);
-    border-radius: 50%;
+
 
     cursor: pointer;
 
@@ -238,7 +279,7 @@ body{
 
         width: 35px;
         height: 5px;
-        background-color: rgb(49, 168, 69);
+        background-color: #ffffff;
 
         top: 50%;
         left: 50%;
@@ -260,7 +301,7 @@ body{
 
         width: 35px;
         height: 5px;
-        background-color: rgb(49, 168, 69);
+        background-color: #ffffff;
 
         top: 25%;
         left: 50%;
@@ -366,6 +407,6 @@ body{
     overflow: hidden;
 }
 
-
+  
 @import "./navigation768px";
 @import "./navigation1280px"
