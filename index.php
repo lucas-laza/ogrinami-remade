@@ -16,6 +16,31 @@
 ?>
     
     <div class="home">
+
+        <div class="grinouilleModale">
+            <div class="gMbody">
+                <div class="leftText parents">
+                    <h2>Avis aux Parents</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure quaerat qui ipsum eius ex hic? Voluptatum eum, fugit asperiores commodi aliquid ullam soluta illum porro dolore recusandae ab minus ipsum!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure quaerat qui ipsum eius ex hic? Voluptatum eum, fugit asperiores commodi aliquid ullam soluta illum porro dolore recusandae ab minus ipsum!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure quaerat qui ipsum eius ex hic? Voluptatum eum, fugit asperiores commodi aliquid ullam soluta illum porro dolore recusandae ab minus ipsum!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure quaerat qui ipsum eius ex hic? Voluptatum eum, fugit asperiores commodi aliquid ullam soluta illum porro dolore recusandae ab minus ipsum!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure quaerat qui ipsum eius ex hic? Voluptatum eum, fugit asperiores commodi aliquid ullam soluta illum porro dolore recusandae ab minus ipsum!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure quaerat qui ipsum eius ex hic? Voluptatum eum, fugit asperiores commodi aliquid ullam soluta illum porro dolore recusandae ab minus ipsum!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure quaerat qui ipsum eius ex hic? Voluptatum eum, fugit asperiores commodi aliquid ullam soluta illum porro dolore recusandae ab minus ipsum!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure quaerat qui ipsum eius ex hic? Voluptatum eum, fugit asperiores commodi aliquid ullam soluta illum porro dolore recusandae ab minus ipsum!</p>
+                    <div class="btns">
+                        <button>Accepter</button>
+                        <button>En savoir plus</button>
+                    </div>
+                </div>
+
+                <div class="leftText enfants">
+                    <h2>Bonjour je suis grinouille !</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure quaerat qui ipsum eius ex hic? Voluptatum eum, fugit asperiores commodi aliquid ullam soluta illum porro dolore recusandae ab minus ipsum!</p>
+                    <div class="btns"><button>Allons-y !</button></div>
+                </div>
+
+                <div class="right">
+                    
+                </div>
+
+            </div>
+        </div>
+
         <section class="terre">
             <div class="titres">
                 <h1><?php if ($_SESSION["lang"] == "FR"){echo "Le jeu Ogrinami !";}else if ($_SESSION["lang"] == "EN"){ echo "The Ogrinami game !";} ?></h1>

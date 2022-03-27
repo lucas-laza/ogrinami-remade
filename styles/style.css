@@ -978,6 +978,41 @@ body {
   width: 100vw;
   display: grid;
 }
+.home .grinouilleModale {
+  display: grid;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #5f863e71;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.home .grinouilleModale .gMbody {
+  width: 90vw;
+  max-width: 1024px;
+  min-height: 65vh;
+  max-height: 90vh;
+  overflow-y: scroll;
+  background-color: #51d824;
+  display: grid;
+  grid-template: 1fr/4fr 3fr;
+}
+.home .grinouilleModale .gMbody .right {
+  background-color: gray;
+  margin: 5%;
+}
+.home .grinouilleModale .gMbody .leftText {
+  margin: 5%;
+  display: grid;
+  overflow-y: scroll;
+}
+.home .grinouilleModale .gMbody .leftText .btns {
+  align-self: flex-end;
+}
+.home .grinouilleModale .gMbody .leftText.enfants {
+  display: none;
+}
 .home .terre {
   width: 100vw;
   height: 100vh;
@@ -1118,6 +1153,13 @@ body {
   }
 }
 @media screen and (min-width: 768px) and (orientation: landscape) {
+  .home .grinouilleModale .gMbody {
+    width: 90vw;
+    max-width: 1024px;
+    max-height: 90vh;
+    max-height: 700px;
+    overflow-y: scroll;
+  }
   .home .terre {
     background-image: url("../img/accueil/terreTablette.jpg");
     background-position: bottom right;

@@ -5,6 +5,54 @@
     width: 100vw;
     display: grid;
 
+    .grinouilleModale{
+        display: grid;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+
+        background-color: #5f863e71;
+
+        align-items: center;
+        justify-content: center;
+
+        z-index: 100;
+
+        .gMbody{
+            width: 90vw;
+            max-width: 1024px;
+            min-height: 65vh;
+            max-height: 90vh;
+            overflow-y: scroll;
+            background-color: #51d824;
+
+            display: grid;
+
+            grid-template: 1fr / 4fr 3fr;
+
+            .right{
+                background-color: gray;
+                margin: 5%;
+            }
+
+            .leftText{
+                margin: 5%;
+                display: grid;
+
+                overflow-y: scroll;
+
+                .btns{
+                    align-self: flex-end;
+                }
+
+            }
+
+            .leftText.enfants{
+                display: none;
+            }
+        }
+    }
+
     .terre {
         width: 100vw;
         height: 100vh;
@@ -212,7 +260,17 @@
 @media screen and (min-width:768px) and (orientation: landscape) {
     .home {
 
-        
+        .grinouilleModale{
+           
+    
+            .gMbody{
+                width: 90vw;
+                max-width: 1024px;
+                max-height: 90vh;
+                max-height: 700px;
+                overflow-y: scroll;
+            }
+        }
 
         .terre {
 
