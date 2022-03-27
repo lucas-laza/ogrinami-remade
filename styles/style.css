@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Atma:wght@600&family=Quicksand&family=Sniglet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@600&family=Quicksand&family=Sniglet&display=swap");
 body {
   overflow: overlay;
 }
@@ -250,24 +251,35 @@ body {
   box-sizing: border-box;
 }
 
+* {
+  max-width: 100% !important;
+}
+
 .texte_t {
   display: inline-block;
+}
+
+.article {
+  width: 100vw;
+}
+.article * {
+  max-width: 100%;
 }
 
 .container {
   display: grid;
   height: auto;
   width: 100vw;
-  margin: auto;
-  margin: auto;
   grid-template: 90px repeat(5, auto) 5vh repeat(3, auto)/1fr;
   grid-template-areas: "." "title" "intro" "part1" "c_IMG" "part2" "." "parents" "recom" "retour";
   gap: 5vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container > * {
-  margin: 0 5vw;
+  padding: 0 5vw;
   border-radius: 12px;
+  max-width: 100%;
+  justify-self: center;
 }
 .container > * > div {
   border-radius: 12px;
@@ -283,7 +295,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  border-radius: 20px;
+  border-radius: 0px;
   display: grid;
   grid-template-areas: 1fr/1fr;
 }
@@ -323,13 +335,12 @@ body {
   margin: 2vh 0;
 }
 .container .GC_intro .p {
-  background-color: #2648c2;
-  padding: 35px 5vw;
+  background-color: #596BAB;
+  padding: 15px 5vw;
   color: white;
   transform: rotate(-1.5deg);
   font-family: "Sniglet";
   font-size: 1.15rem;
-  text-align: justify;
   transform: rotate(1.5deg);
 }
 .container .GC_part1 {
@@ -352,13 +363,11 @@ body {
 .container .GC_part1 p {
   font-size: 1.15rem;
   color: white;
-  text-align: justify;
-  padding: 5px;
 }
 .container .GC_part1 .illus {
   width: 100%;
   height: 40vw;
-  background-color: #8BE1F4;
+  background-color: #65898f;
 }
 .container .GC_part1 .box_P {
   background-color: #76AFEF;
@@ -381,6 +390,7 @@ body {
 }
 .container .GC_central_IMG {
   grid-area: c_IMG;
+  width: 100%;
   height: 33vh;
 }
 .container .GC_part2 {
@@ -419,7 +429,6 @@ body {
 }
 .container .GC_part2 .BP_P3 {
   grid-area: texte_P3;
-  text-align: justify;
 }
 .container .GC_part2 .illus2 {
   grid-area: illus2;
@@ -429,7 +438,6 @@ body {
 }
 .container .GC_part2 .BP_P4 {
   grid-area: texte_P4;
-  text-align: justify;
 }
 .container .GC_part2 .pied {
   grid-area: pied;
@@ -437,7 +445,6 @@ body {
 .container .GC_part2 .pied h4 {
   margin: 0;
   padding: 0;
-  color: #2648c2;
 }
 .container .Recommandations {
   grid-area: recom;
@@ -479,7 +486,7 @@ body {
   position: absolute;
   bottom: 0;
   text-align: center;
-  background-color: #16ABFC;
+  background-color: rgba(19, 19, 19, 0.644);
   border-radius: 15px;
   backdrop-filter: blur(5px);
 }
@@ -498,10 +505,8 @@ body {
 .container .For_Parents h3 {
   margin: 0;
   padding: 1vh;
-  background-color: #16ABFC;
+  background-color: #313131;
   width: 100%;
-  color: white;
-  border-radius: 20px 20px 0px 0px;
 }
 .container .For_Parents .For_P_Container {
   width: 100%;
@@ -512,9 +517,8 @@ body {
 .container .For_Parents .For_P_Container .Asso {
   width: 100%;
   height: 50%;
-  background-color: #5d5deb;
+  background-color: darkblue;
   position: relative;
-  border-radius: 0px 0px 0px 20px;
 }
 .container .For_Parents .For_P_Container .Asso a {
   position: relative;
@@ -535,14 +539,10 @@ body {
   align-self: flex-end;
   justify-self: center;
 }
-.container .For_Parents .For_P_Container .Asso a .bouton:hover {
-  background-color: #7FC50E;
-}
 .container .For_Parents .For_P_Container .Shop {
   width: 100%;
   height: 50%;
   background-color: darkgoldenrod;
-  border-radius: 0px 0px 20px 0px;
 }
 .container .For_Parents .For_P_Container .Shop a {
   position: relative;
@@ -563,38 +563,26 @@ body {
   align-self: flex-end;
   justify-self: center;
 }
-.container .For_Parents .For_P_Container .Shop a .bouton:hover {
-  background-color: #7FC50E;
-}
 .container .Retour_Accueil {
   grid-area: retour;
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 30vh;
-  background-color: #7FC50E;
+  background-color: yellow;
   padding: 2%;
   margin: 15vh 0;
 }
 .container .Retour_Accueil .Grinouille {
-  width: 100%;
+  width: 40%;
   height: 100%;
   display: grid;
 }
 .container .Retour_Accueil .Grinouille .Grinouille_IMG {
-  background-color: #b6f552;
+  background-color: yellowgreen;
   width: 100px;
   height: 150px;
-  display: flex;
   justify-self: center;
-  align-self: center;
-}
-.container .Retour_Accueil .Grinouille .earth {
-  height: 50%;
-  width: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   align-self: center;
 }
 .container .Retour_Accueil .Retour_T {
@@ -608,7 +596,6 @@ body {
 .container .Retour_Accueil .Retour_T a {
   display: grid;
   text-align: center;
-  text-decoration: none;
 }
 .container .Retour_Accueil .Retour_T a .bouton {
   background-color: royalblue;
@@ -618,55 +605,25 @@ body {
   max-width: 80%;
   justify-self: center;
 }
-.container .Retour_Accueil .Retour_T a .bouton:hover {
-  background-color: #6a89e7;
-}
-.container .Retour_Accueil .Retour_T a p {
+.container .Retour_Accueil .Retour_T a .bouton p {
   color: white;
   text-decoration: none;
   font-size: 1.3rem;
-}
-.container h3 {
-  font-family: "Atma";
-  font-size: 1.65rem;
-  color: white;
-}
-.container .ecout {
-  font-family: "atma";
-  font-weight: 600;
-}
-.container .audio {
-  width: 100%;
-  background-color: #6dccff;
-  display: grid;
-}
-.container audio {
-  grid-area: part1;
-  text-align: center;
-}
-.container audio::-webkit-media-controls-enclosure {
-  border-radius: 0px;
-  background-color: #16ABFC;
-}
-.container audio:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(2px 3px 3px #333);
-}
-.container audio:hover::-webkit-media-controls-enclosure {
-  border-radius: 0px;
-  background-color: #16ABFC;
 }
 
 .illus * {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
-.recom_date {
-  color: #456dfd;
+@media screen and (max-width: 400px) {
+  .container * {
+    margin: 0;
+  }
+  .container p {
+    font-size: calc(0.8rem + 0.5vw) !important;
+  }
 }
-
 @media screen and (min-width: 768px) {
   .container {
     grid-template: 75px repeat(5, auto) 5vh repeat(3, auto)/1fr;
@@ -674,7 +631,6 @@ body {
   }
   .container .GC_title {
     min-height: 35vw;
-    width: 95%;
   }
   .container .GC_part1 {
     grid-template: repeat(4, auto)/35% 65%;
@@ -766,16 +722,6 @@ body {
     height: 50vh;
   }
 }
-@media screen and (max-width: 768px) {
-  .background_title {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-
-  .GC_title {
-    width: 97%;
-  }
-}
 @media screen and (min-width: 1280px) {
   body {
     background-color: #f7f7f7;
@@ -826,12 +772,6 @@ body {
     bottom: 0;
   }
 }
-@media screen and (max-width: 1280px) {
-  .background_title {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-}
 .quiz_container {
   width: 100vw;
   height: 100vh;
@@ -842,14 +782,16 @@ body {
   justify-self: flex-end;
   height: calc(100% - 100px);
   width: 100%;
-  background-color: #afafaf;
+  max-height: 550px;
   grid-template-rows: 7fr 4fr;
-  gap: 5vh;
+  gap: 2vh;
   display: grid;
 }
 .quiz_container .quiz .bckg {
   background-color: #515251;
   display: grid;
+  border-radius: 15px;
+  background-image: url("../img/article/5/1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -857,33 +799,58 @@ body {
 .quiz_container .quiz .bckg .questionBox {
   justify-self: center;
   align-self: center;
-  color: white;
+  font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(255, 255, 255, 0.87);
+  color: rgba(0, 0, 0, 0.815);
   font-size: 1.8rem;
   padding: 2rem;
-  background-color: #646464;
   border-radius: 25px;
 }
 .quiz_container .quiz .reponses {
   display: grid;
-  background-color: yellow;
-  gap: 2vh;
 }
 .quiz_container .quiz .reponses > * {
   justify-self: center;
-  background-color: red;
-  width: 100%;
+  align-self: center;
+  background-color: #604ED0;
+  border-radius: 15px;
+  width: auto;
   text-align: center;
-  margin: 1vh;
-  padding: 1vw;
+  padding: 2vh;
+  font-size: 1.5rem;
   color: whitesmoke;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.3rem;
-  transition: ease 0.08s;
+  font-family: "atma";
   text-decoration: none;
+  transition: ease-in-out 0.3s;
 }
 .quiz_container .quiz .reponses > *:hover {
-  font-size: 1.5rem;
-  transition: ease 0.2s;
+  transform: scale(0.93);
+}
+
+.quizstart {
+  background-image: url("../img/article/5/1.png");
+  background-position: center;
+  max-height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.quizstart .qs_img {
+  margin: 20px;
+  align-self: flex-end;
+  background-color: #604ED0;
+  height: fit-content;
+  width: fit-content;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: ease-in-out 0.3s;
+}
+.quizstart .qs_img:hover {
+  transform: scale(0.93);
+}
+.quizstart .qs_img .rep.r2 {
+  font-family: "atma";
+  color: white;
+  border-radius: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -894,6 +861,7 @@ body {
   }
 }
 .quizstart_container {
+  padding-top: calc(60px + 5vh);
   height: fit-content;
   min-height: 80vh;
   width: 100vw;
@@ -902,30 +870,54 @@ body {
 .quizstart_container .quizstart {
   height: calc(100% - 100px);
   width: 100%;
-  align-self: flex-end;
+  align-self: center;
   display: grid;
   grid-template: 1fr auto 6fr/1fr;
   grid-template-areas: "qst" "qsd" "qsi";
 }
 .quizstart_container .quizstart .qs_titre {
-  background-color: #15ff3c;
   grid-area: qst;
+  display: flex;
+  justify-content: left;
+  padding: 10px;
+  margin: 20px;
+  align-items: center;
+  font-family: "atma";
+  color: white;
+  background-color: #6FB32B;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 15px;
 }
 .quizstart_container .quizstart .qs_desc {
-  background-color: #afafaf;
+  display: flex;
+  justify-content: left;
+  margin: 0 20px 20px 20px;
+  padding: 10px;
   grid-area: qsd;
-  min-height: 20vh;
+  font-family: "atma";
+  color: rgba(255, 255, 255, 0.733);
+  background-color: #6FB32B;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 15px;
+  font-size: 0.95rem;
 }
 .quizstart_container .quizstart .qs_img {
-  background-color: darkkhaki;
   grid-area: qsi;
+  padding: 10px;
+  align-self: flex-end;
+  justify-self: flex-end;
 }
 
 @media screen and (min-width: 768px) {
   .quizstart_container .quizstart {
-    height: 75%;
+    max-height: 600px;
+    height: auto;
     width: 75vw;
     justify-self: center;
+    align-self: center;
+    border-radius: 15px;
     grid-template: 1fr 8fr/1fr 1fr;
     grid-template-areas: "qst qsi" "qsd qsi";
   }
@@ -945,12 +937,18 @@ body {
   grid-template-areas: "fqi" "fqp";
 }
 .finquiz_container .finquiz .fq_titre {
-  background-color: #c4c4c4;
   justify-self: center;
-  align-self: center;
+  align-self: flex-end;
+  text-align: center;
+  font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(255, 255, 255, 0.87);
+  color: rgba(0, 0, 0, 0.815);
+  font-size: 1.5rem;
+  border-radius: 15px;
+  padding: 2vh;
+  margin: 1vh;
 }
 .finquiz_container .finquiz .fq_para {
-  background-color: #afafaf;
   grid-area: fqp;
   min-height: 20vh;
   display: grid;
@@ -958,8 +956,31 @@ body {
   text-align: center;
   padding: 2vh;
 }
+.finquiz_container .finquiz .fq_para .info_an {
+  color: black;
+  font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.3rem;
+}
+.finquiz_container .finquiz .fq_para .rep.r2 {
+  font-family: "atma";
+  padding: 2vh;
+  font-size: 1.5rem;
+  color: white;
+  align-self: center;
+  justify-self: center;
+  background-color: #604ED0;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: ease-in-out 0.3s;
+}
+.finquiz_container .finquiz .fq_para .rep.r2:hover {
+  transform: scale(0.93);
+}
 .finquiz_container .finquiz .fq_img {
-  background-color: darkkhaki;
+  background-image: url("../img/article/5/1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   grid-area: fqi;
   display: grid;
 }
@@ -972,6 +993,9 @@ body {
     grid-template: 1fr/1fr 1fr;
     grid-template-areas: "fqi fqp";
   }
+  .finquiz_container .finquiz .fq_img {
+    border-radius: 15px;
+  }
 }
 .home {
   height: fit-content;
@@ -979,7 +1003,7 @@ body {
   display: grid;
 }
 .home .grinouilleModale {
-  display: grid;
+  display: none;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -1406,9 +1430,12 @@ body {
   padding: 5vh 0;
 }
 .quizes .liste .listchild {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 35vh;
   width: 90%;
-  background-color: blueviolet;
+  background-image: url("../img/accueil/terreMobile.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

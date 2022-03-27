@@ -33,9 +33,12 @@
 
         padding: 5vh 0;
         .listchild{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 35vh;
             width: 90%;
-            background-color: blueviolet;
+            background-image: url("../img/accueil/terreMobile.jpg");
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
