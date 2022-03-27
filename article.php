@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="img/Ogrinami-logo-green.svg" type="image/x-icon">
     <title>Ogrinami</title>
 </head>
 <body>
@@ -97,8 +98,8 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
 
                                 <div class="audio">
                                 <audio controls>
-                                    <source src="voixoff/<?php echo $_GET["id"]; ?>.mp3" type="audio/mpeg">
-                                    <source src="voixoff/<?php echo $_GET["id"]; ?>.ogg" type="audio/ogg">
+                                    <source src="voixoff/<?= $_SESSION["lang"]?>/<?= $_GET["id"]; ?>.mp3" type="audio/mpeg">
+                                    <source src="voixoff/<?= $_SESSION["lang"]?>/<?= $_GET["id"]; ?>.ogg" type="audio/ogg">
                                 </audio>
                                 </div>
                             </div>

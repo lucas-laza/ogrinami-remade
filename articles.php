@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="img/Ogrinami-logo-green.svg" type="image/x-icon">
     <title>Ogrinami</title>
 </head>
 <body>
@@ -30,7 +31,7 @@
                     $idR = $row["id_article_E"];
         
                     // echo $idTexte;
-                    echo "<div class='listchild' style=\"background-image: url('http://www.ogrinami.com/img/article/$idR/1.jpg')\">";
+                    echo "<div class='listchild' style=\"background-image: url('http://www.ogrinami.com/img/article/$idR/1.webp')\">";
                     echo "<a href='article.php?id=$idR'></a>";
                     echo "<h1>";
                     includeWithVariables('texte.php', array('id' => $idTexte));

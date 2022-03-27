@@ -30,8 +30,8 @@ body {
   transform: scale(0.92);
 }
 .header .logo img {
-  width: 100%;
-  height: 100%;
+  width: 60px;
+  height: 60px;
 }
 .header .logo a {
   position: absolute;
@@ -1007,7 +1007,7 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: #5f863e71;
+  background-color: #260035a1;
   align-items: center;
   justify-content: center;
   z-index: 100;
@@ -1018,21 +1018,65 @@ body {
   min-height: 65vh;
   max-height: 90vh;
   overflow-y: scroll;
-  background-color: #51d824;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: #48d31a;
   display: grid;
-  grid-template: 1fr/4fr 3fr;
+  grid-template: 3fr 2fr/1fr;
+}
+.home .grinouilleModale .gMbody::-webkit-scrollbar {
+  display: none;
 }
 .home .grinouilleModale .gMbody .right {
-  background-color: gray;
+  background-color: rgba(145, 240, 126, 0.63);
   margin: 5%;
+  background-image: url("../img/accueil/grinouille.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 .home .grinouilleModale .gMbody .leftText {
   margin: 5%;
   display: grid;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.home .grinouilleModale .gMbody .leftText::-webkit-scrollbar {
+  display: none;
+}
+.home .grinouilleModale .gMbody .leftText .langChange {
+  width: 5vw;
+  height: 5vw;
+  max-width: 50px;
+  min-width: 20px;
+  max-height: 50px;
+  min-height: 20px;
+  background-image: url("../img/accueil/lang.svg");
+  background-size: contain;
+  position: absolute;
+  justify-self: flex-end;
+  margin: 1%;
+  cursor: pointer;
+}
+.home .grinouilleModale .gMbody .leftText h2 {
+  font-family: "Atma", sans-serif;
+  font-size: calc(1.2rem + 2vmin);
+}
+.home .grinouilleModale .gMbody .leftText p {
+  font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
 }
 .home .grinouilleModale .gMbody .leftText .btns {
   align-self: flex-end;
+}
+.home .grinouilleModale .gMbody .leftText .btns button {
+  padding: 2%;
+  background-color: #246110;
+  color: white;
+  font-size: calc(0.8rem + 1vmin);
+  margin: 1% 0;
+  border: none;
+  cursor: pointer;
 }
 .home .grinouilleModale .gMbody .leftText.enfants {
   display: none;
@@ -1079,6 +1123,7 @@ body {
   max-height: 10vh;
   min-height: 12vh;
   height: fit-content;
+  cursor: pointer;
   background-color: #34801B;
   font-family: "atma";
   color: #ffffff;
@@ -1142,7 +1187,6 @@ body {
 }
 .home .rubriques .liste .rubrique .img {
   height: 70%;
-  background-image: url("../img/accueil/article.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1163,7 +1207,17 @@ body {
   font-size: calc(0.2rem + 7vw);
 }
 
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .home .grinouilleModale .gMbody {
+    grid-template: 1fr/4fr 3fr;
+    max-height: 100vh;
+  }
+}
 @media screen and (min-width: 768px) and (orientation: portrait) {
+  .home .grinouilleModale .gMbody {
+    grid-template: 1fr/4fr 3fr;
+    max-height: 100vh;
+  }
   .home .terre .titres h1 {
     font-size: calc(0.7rem + 5vw);
   }
@@ -1178,10 +1232,11 @@ body {
 }
 @media screen and (min-width: 768px) and (orientation: landscape) {
   .home .grinouilleModale .gMbody {
+    grid-template: 1fr/4fr 3fr;
     width: 90vw;
     max-width: 1024px;
-    max-height: 90vh;
     max-height: 700px;
+    max-height: 90%;
     overflow-y: scroll;
   }
   .home .terre {
@@ -1220,7 +1275,7 @@ body {
   }
   .home .rubriques .liste .rubrique {
     height: 60vh;
-    width: 40vw;
+    width: 35vw;
   }
   .home .rubriques .liste .rubrique .bouton div {
     font-size: calc(0.5rem + 3vw);
@@ -1435,6 +1490,35 @@ body {
     font-size: calc(30px + 0.75rem);
   }
 }
+.games {
+  display: grid;
+  grid-template: 1fr 1fr 1fr/1fr;
+  padding-top: calc(60px + 5vh);
+  min-height: 100vh;
+  gap: 5vh;
+}
+.games a {
+  text-decoration: none;
+  color: black;
+}
+.games .game {
+  width: 100%;
+  height: 100%;
+  background-color: #b0f777;
+}
+.games .game .img {
+  width: 100%;
+  height: 75%;
+  background-size: cover;
+  background-position: center;
+}
+.games .game h2 {
+  margin: 0;
+  font-size: calc(1rem + 1vmin);
+  text-align: center;
+  font-family: "Atma", sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }
