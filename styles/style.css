@@ -1242,7 +1242,7 @@ body {
   }
   .home .rubriques .liste .rubrique {
     height: 60vh;
-    width: 25vw;
+    width: 35vw;
   }
   .home .rubriques .liste .rubrique .bouton div {
     font-size: calc(0.5rem + 3vw);
