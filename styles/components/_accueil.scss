@@ -11,7 +11,7 @@
         width: 100vw;
         height: 100vh;
 
-        background-color: #5f863e71;
+        background-color: #260035a1;
 
         align-items: center;
         justify-content: center;
@@ -24,7 +24,14 @@
             min-height: 65vh;
             max-height: 90vh;
             overflow-y: scroll;
-            background-color: #51d824;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            -ms-overflow-style: none; 
+            scrollbar-width: none;
+
+            background-color: #48d31a;
 
             
 
@@ -47,6 +54,11 @@
                 display: grid;
 
                 overflow-y: scroll;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                -ms-overflow-style: none; 
+                scrollbar-width: none;
 
                 .langChange{
                     width: 5vw;
