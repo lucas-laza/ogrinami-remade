@@ -52,7 +52,7 @@
             <div class="titre"><div><?php if ($_SESSION["lang"] == "FR"){echo "Toutes les rubriques";}else if ($_SESSION["lang"] == "EN"){ echo "All sections";} ?></div></div>
             <div class="liste">
                 <div class="rubrique"><div class="img"></div><div class="bouton"><div><?php if ($_SESSION["lang"] == "FR"){echo "Articles";}else if ($_SESSION["lang"] == "EN"){ echo "Articles";} ?></div></div><a href="articles.php"></a></div>
-                <div class="rubrique"><div class="img"></div><div class="bouton"><div><?php if ($_SESSION["lang"] == "FR"){echo "Les quiz";}else if ($_SESSION["lang"] == "EN"){ echo "All quizes";} ?></div><a href="quizes.php"></a></div></div>
+                <div class="rubrique"><div class="img"></div><div class="bouton"><div><?php if ($_SESSION["lang"] == "FR"){echo "Les quiz";}else if ($_SESSION["lang"] == "EN"){ echo "All quizes";} ?></div><a href="quiz.php?id=1"></a></div></div>
                 <div class="rubrique"><div class="img"></div><div class="bouton"><div><?php if ($_SESSION["lang"] == "FR"){echo "Mini-jeux";}else if ($_SESSION["lang"] == "EN"){ echo "Mini games";} ?></div><a href="games/planetClicker/"></a></div></div>
             </div>
         </section>
