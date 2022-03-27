@@ -1,0 +1,39 @@
+
+
+
+.games{
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr;
+    padding-top: calc(60px + 5vh);
+
+    min-height: 100vh;
+    gap: 5vh;
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .game{
+        width: 100%;
+        height: 100%;
+        
+
+        background-color: rgb(176, 247, 119);
+
+
+        .img{
+            width: 100%;
+            height: 75%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        h2{
+            margin: 0;
+            font-size: calc(1rem + 1vmin);
+            text-align: center;
+            font-family: "Atma", sans-serif;
+        }
+    }
+}

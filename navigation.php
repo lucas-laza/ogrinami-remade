@@ -20,7 +20,7 @@
             
 
             
-                <a href="games/planetClicker/"><?php if($_SESSION["lang"] == "FR"){ echo "Mini-jeux"; } else if($_SESSION["lang"] == "EN"){echo "Mini games";} ?></a>
+                <a href="jeux.php"><?php if($_SESSION["lang"] == "FR"){ echo "Mini-jeux"; } else if($_SESSION["lang"] == "EN"){echo "Mini games";} ?></a>
             
 
             

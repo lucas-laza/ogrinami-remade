@@ -188,7 +188,7 @@
         height: fit-content;
         min-height: 250vh;
         //
-        // mettre une image ici magueule
+        // mettre une image ici
         //
         display: grid;
         grid-template: auto 1fr / 1fr;
@@ -252,7 +252,7 @@
 
                 .img {
                     height: 70%;
-                    background-image: url("../img/accueil/article.png");
+                    
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
