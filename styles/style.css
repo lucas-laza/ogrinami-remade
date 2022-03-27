@@ -255,6 +255,13 @@ body {
   display: inline-block;
 }
 
+.article {
+  width: 100vw;
+}
+.article * {
+  max-width: 100%;
+}
+
 .container {
   display: grid;
   height: auto;
@@ -269,6 +276,7 @@ body {
 .container > * {
   margin: 0 5vw;
   border-radius: 12px;
+  max-width: 100%;
 }
 .container > * > div {
   border-radius: 12px;
