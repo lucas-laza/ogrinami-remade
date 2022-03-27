@@ -26,13 +26,20 @@
             overflow-y: scroll;
             background-color: #51d824;
 
+            
+
             display: grid;
 
-            grid-template: 1fr / 4fr 3fr;
+            grid-template: 3fr 2fr / 1fr;
 
             .right{
-                background-color: gray;
+                background-color: rgba(145, 240, 126, 0.63);
                 margin: 5%;
+
+                background-image: url("../img/accueil/grinouille.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom;
             }
 
             .leftText{
@@ -41,8 +48,47 @@
 
                 overflow-y: scroll;
 
+                .langChange{
+                    width: 5vw;
+                    height: 5vw;
+                    max-width: 50px;
+                    min-width: 20px;
+                    max-height: 50px;
+                    min-height: 20px;
+
+                    background-image: url("../img/accueil/lang.svg");
+                    background-size: contain;
+
+                    position: absolute;
+                    justify-self: flex-end;
+                    margin: 1%;
+                    cursor: pointer;
+                }
+
+                h2{
+                    font-family: "Atma", sans-serif;
+                    font-size: calc(1.2rem + 2vmin);
+                }
+
+                p{
+                    font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
+                }
+
                 .btns{
                     align-self: flex-end;
+
+                    button{
+                        padding: 2%;
+                        background-color: #246110;
+                        color: white;
+                        font-size: calc(0.8rem + 1vmin);
+
+                        margin: 1% 0;
+
+                        border: none;
+
+                        cursor: pointer;
+                    }
                 }
 
             }
@@ -100,6 +146,8 @@
             max-height: 10vh;
             min-height: 12vh;
             height: fit-content;
+
+            cursor: pointer;
             
 
             background-color: #34801B;
@@ -228,8 +276,32 @@
 
 }
 
+@media screen and (max-width:767px) and (orientation: landscape) {
+    .home {
+
+        .grinouilleModale{
+           
+    
+            .gMbody{
+                grid-template: 1fr / 4fr 3fr;
+                max-height: 100vh;
+            }
+        }
+    }
+}
+
 @media screen and (min-width:768px) and (orientation: portrait) {
     .home {
+
+        .grinouilleModale{
+           
+    
+            .gMbody{
+                grid-template: 1fr / 4fr 3fr;
+                max-height: 100vh;
+            }
+        }
+
 
 
         .terre {
@@ -264,10 +336,11 @@
            
     
             .gMbody{
+                grid-template: 1fr / 4fr 3fr;
                 width: 90vw;
                 max-width: 1024px;
-                max-height: 90vh;
                 max-height: 700px;
+                max-height: 90%;
                 overflow-y: scroll;
             }
         }
@@ -321,7 +394,7 @@
 
                 .rubrique {
                     height: 60vh;
-                    width: 40vw;
+                    width: 25vw;
                     
 
                     .bouton {
