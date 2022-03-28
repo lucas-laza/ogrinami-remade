@@ -251,16 +251,15 @@ body {
   box-sizing: border-box;
 }
 
-* {
-  max-width: 100% !important;
-}
-
 .texte_t {
   display: inline-block;
 }
 
 .article {
   width: 100vw;
+}
+.article * {
+  max-width: 100% !important;
 }
 .article * {
   max-width: 100%;
@@ -368,6 +367,8 @@ body {
   width: 100%;
   height: 40vw;
   background-color: #65898f;
+  background-color: #8BE1F4;
+  background-size: contain;
 }
 .container .GC_part1 .box_P {
   background-color: #76AFEF;
@@ -422,6 +423,7 @@ body {
 .container .GC_part2 .illus {
   width: 100%;
   height: 40vw;
+  background-size: contain;
   background-color: #65898f;
 }
 .container .GC_part2 .BT_P3 {
@@ -828,7 +830,7 @@ body {
 }
 
 .quizstart {
-  background-image: url("../img/article/5/1.png");
+  background-image: url("../img/article/5/1.webp");
   background-position: center;
   max-height: 400px;
   background-repeat: no-repeat;
@@ -977,7 +979,7 @@ body {
   transform: scale(0.93);
 }
 .finquiz_container .finquiz .fq_img {
-  background-image: url("../img/article/5/1.png");
+  background-image: url("../img/article/5/1.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1500,10 +1502,15 @@ body {
 .games a {
   text-decoration: none;
   color: black;
+  display: grid;
+  width: 100%;
+  height: 100%;
 }
 .games .game {
   width: 100%;
   height: 100%;
+  max-width: 400px;
+  justify-self: center;
   background-color: #b0f777;
 }
 .games .game .img {
@@ -1514,11 +1521,31 @@ body {
 }
 .games .game h2 {
   margin: 0;
-  font-size: calc(1rem + 1vmin);
+  font-size: calc(0.8rem + 1vmin);
   text-align: center;
   font-family: "Atma", sans-serif;
 }
 
+@media screen and (min-width: 768px) {
+  .games {
+    margin: 0 5vw;
+    min-height: 50vh;
+    max-height: 700px !important;
+    grid-template: 1fr/1fr 1fr 1fr;
+    gap: 5vh;
+  }
+  .games .game .img {
+    width: 100%;
+    height: 75%;
+    background-size: cover;
+    background-position: center;
+  }
+  .games .game h2 {
+    margin: 0;
+    text-align: center;
+    font-family: "Atma", sans-serif;
+  }
+}
 * {
   box-sizing: border-box;
 }

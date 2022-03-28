@@ -4,9 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Atma:wght@600&family=Quicksand&family=Sniglet&display=swap');
 
-*{
-    max-width: 100% !important;
-}
+
 
 .texte_t{
     display: inline-block;
@@ -18,6 +16,10 @@
 
 .article{
     width: 100vw;
+
+    & *{
+        max-width: 100% !important;
+    }
 
     & *{
         max-width: 100%;
@@ -228,16 +230,15 @@
             background-color: rgb(101, 137, 143);
 
             
-<<<<<<< HEAD
 
             background-color: #8BE1F4;
             background-size: contain;
 
+            
 
 
-=======
+
           
->>>>>>> 0e40e87e375b4958e588803780a4efe5a085756f
         }
 
         .box_P{
@@ -333,6 +334,7 @@
             width: 100%;
             height: 40vw;
 
+            background-size: contain;
             background-color: rgb(101, 137, 143);
             
         }
