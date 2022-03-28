@@ -14,7 +14,7 @@
             
 
             
-                <a href="articles.php"><?php if($_SESSION["lang"] == "FR"){ echo "Articles"; } else if($_SESSION["lang"] == "EN"){echo "Articles";} ?></a>
+                <a href="articles.php"><?php if($_SESSION["lang"] == "FR"){ echo "Mini-lectures"; } else if($_SESSION["lang"] == "EN"){echo "Mini-readings";} ?></a>
 
                 <a href="quiz.php?id=1"><?php if($_SESSION["lang"] == "FR"){ echo "Les quiz"; } else if($_SESSION["lang"] == "EN"){echo "Quizes";} ?></a>
             

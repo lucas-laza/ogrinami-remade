@@ -1034,7 +1034,7 @@ body {
   display: grid;
 }
 .home .grinouilleModale {
-  display: none;
+  display: grid;
   position: fixed;
   width: 100vw;
   height: 100vh;

@@ -1,11 +1,16 @@
 if (sessionStorage.getItem('ogrinami-popup-p') != undefined){
     document.querySelector(".leftText.parents").style.display = "none";
     document.querySelector(".leftText.enfants").style.display = "grid";
+    console.log("no p");
 }
+
+console.log("js");
 
 if (sessionStorage.getItem('ogrinami-popup-c') != undefined){
     document.querySelector(".grinouilleModale").style.display = "none";
+    console.log("no c");
 }
+
 
 
 

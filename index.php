@@ -47,6 +47,11 @@
                     } ?>
                 </p>
                     <div class="btns">
+                        <a href="https://youtu.be/PspG5B1vwnQ" target="_blank">
+                            <button class=""><?php if ($_SESSION["lang"] == "FR"){ ?> Regarder la vidéo explicative <?php }else{ ?> Watch the explanatory video <?php } ?></button>
+                            
+                        </a>
+                        <br>
                         <button class="cAccept"><?php if ($_SESSION["lang"] == "FR"){ ?> Allons-y ! <?php }else{ ?> Let's go ! <?php } ?></button>
                         <button class="cAcceptAgain"><?php if ($_SESSION["lang"] == "FR"){ ?> Ne plus me montrer <?php }else{ ?> Don't show again <?php } ?></button>
                 
@@ -72,7 +77,7 @@
             <div class="liste">
 
                 <div class="rubrique"><div class="img" style="background-image: url('./img/accueil/jeux.png');"></div><div class="bouton"><div><?php if ($_SESSION["lang"] == "FR"){echo "Mini-jeux";}else if ($_SESSION["lang"] == "EN"){ echo "Mini games";} ?></div><a href="jeux.php"></a></div></div>
-                <div class="rubrique"><div class="img" style="background-image: url('./img/accueil/article.png');"></div><div class="bouton"><div><?php if ($_SESSION["lang"] == "FR"){echo "Articles";}else if ($_SESSION["lang"] == "EN"){ echo "Articles";} ?></div></div><a href="articles.php"></a></div>
+                <div class="rubrique"><div class="img" style="background-image: url('./img/accueil/article.png');"></div><div class="bouton"><div><?php if ($_SESSION["lang"] == "FR"){echo "Mini-lecture";}else if ($_SESSION["lang"] == "EN"){ echo "Mini-reading";} ?></div></div><a href="articles.php"></a></div>
                 <div class="rubrique"><div class="img" style="background-image: url('./img/accueil/quiz.png');"></div><div class="bouton"><div><?php if ($_SESSION["lang"] == "FR"){echo "Les quiz";}else if ($_SESSION["lang"] == "EN"){ echo "All quizes";} ?></div><a href="quiz.php?id=1"></a></div></div>
             </div>
         </section>
