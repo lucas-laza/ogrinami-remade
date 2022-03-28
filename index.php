@@ -14,7 +14,7 @@
     include "PDO.php";
     include "header.php";
 ?>
-    
+    <meta name="theme-color" content="#00223d">
     <div class="home">
 
         <div class="grinouilleModale">
