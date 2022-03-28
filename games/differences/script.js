@@ -1,10 +1,13 @@
 
 let vies = 3;
 
- 
+
 
 window.addEventListener('load', function() {
     // console.log("load")
+    
+    
+  
     
     for (let i = 1; i <= 7; i++ ){
         
@@ -23,13 +26,13 @@ window.addEventListener('load', function() {
         "credit": "David Vives",
         "differences":  [
     
-                         1,0,0,0,0,0,0,
                          0,0,0,0,0,0,0,
+                         0,0,0,1,0,0,2,
+                         3,4,0,0,0,0,0,
                          0,0,0,0,0,0,0,
-                         0,0,2,0,0,0,3,
+                         0,0,5,0,0,0,0,
                          0,0,0,0,0,0,0,
-                         0,0,0,0,0,4,0,
-                         5,0,0,0,0,0,0
+                         0,0,6,0,0,0,7
         ],
         "nbDiff": 3,
         "cases":[
@@ -38,9 +41,6 @@ window.addEventListener('load', function() {
                 "photos":[
                     {
                     "lien": "img/paysage1/1-1.png"
-                    },
-                    {
-                    "lien": "img/paysage1/1-2.png" 
                     }
                 ]
             },
@@ -65,9 +65,6 @@ window.addEventListener('load', function() {
                 "photos":[
                     {
                     "lien": "img/paysage1/4-1.png"
-                    },
-                    {
-                    "lien": "img/paysage1/4-2.png" 
                     }
                 ]
             },
@@ -79,11 +76,31 @@ window.addEventListener('load', function() {
                     },
                 ]
             },
+            {
+                "n":6,
+                "photos":[
+                    {
+                    "lien": "img/paysage1/6-1.png"
+                    },
+                ]
+            },
+            {
+                "n":7,
+                "photos":[
+                    {
+                    "lien": "img/paysage1/7-1.png"
+                    },
+                ]
+            },
             
     
     ]
     
     }];
+
+
+    
+
 
     document.querySelector('.win .downloadImage').innerHTML = `<a href="img/paysage${paysage[0].id}/imageDifferences.png" download>Télécharger le paysage !</a>`;
 
@@ -231,3 +248,6 @@ function findCase(where,num){
 
 }
 
+document.querySelectorAll(".area").forEach(element => {
+    element.style.backgroundImage = `url("img/paysage1/imageDifferences.png")`;
+});
