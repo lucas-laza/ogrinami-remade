@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="img/Ogrinami-logo-green.svg" type="image/x-icon">
     <title>Ogrinami</title>
 </head>
 <body>
@@ -25,7 +26,7 @@ if (isset($_GET["id"])){
 
 $styleIMG1 = " background-image:url('http://www.ogrinami.com/img/article/$article/1.webp');
         background-position: center;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;";
 
 $styleIMG3 = " background-image:url('http://www.ogrinami.com/img/article/$article/3.webp');
@@ -97,8 +98,8 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
 
                                 <div class="audio">
                                 <audio controls>
-                                    <source src="voixoff/<?php echo $_GET["id"]; ?>.mp3" type="audio/mpeg">
-                                    <source src="voixoff/<?php echo $_GET["id"]; ?>.ogg" type="audio/ogg">
+                                    <source src="voixoff/<?= $_SESSION["lang"]?>/<?= $_GET["id"]; ?>.mp3" type="audio/mpeg">
+                                    <source src="voixoff/<?= $_SESSION["lang"]?>/<?= $_GET["id"]; ?>.ogg" type="audio/ogg">
                                 </audio>
                                 </div>
                             </div>
@@ -283,7 +284,7 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                             <a href="parent.php">
                                 
                             <div class="bouton">Associations partenaires</div>
-                            <img src="img/article/1/2.webp" alt="">
+                            
                             </a>
                             
                             </div>
@@ -291,7 +292,7 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                           
                             <a href="shop.php">
                             <div class="bouton">Accéder à la boutique</div>
-                            <img src="img/article/1/2.webp" alt="">
+                            
                             </a>
                             </div>
                         </div>
@@ -430,10 +431,10 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                                 </div>
                             </div>
                             <div class="Retour_T">
-                                <div>
+                                <div class="lost">
                                     <h3>Tu t'es perdu ?</h3>
                                 </div>
-                                <a href="accueil.php">
+                                <a href="index.php">
                             <div class="bouton"><p>retour à l'accueil</p></div>
                                 </a>
                             </div>

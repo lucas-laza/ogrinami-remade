@@ -5,6 +5,112 @@
     width: 100vw;
     display: grid;
 
+    .grinouilleModale{
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+
+        background-color: #260035a1;
+
+        align-items: center;
+        justify-content: center;
+
+        z-index: 100;
+
+        .gMbody{
+            width: 90vw;
+            max-width: 1024px;
+            min-height: 65vh;
+            max-height: 90vh;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            -ms-overflow-style: none; 
+            scrollbar-width: none;
+
+            background-color: #48d31a;
+
+            
+
+            display: grid;
+
+            grid-template: 3fr 2fr / 1fr;
+
+            .right{
+                background-color: rgba(145, 240, 126, 0.63);
+                margin: 5%;
+
+                background-image: url("../img/accueil/grinouille.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom;
+            }
+
+            .leftText{
+                margin: 5%;
+                display: grid;
+
+                overflow-y: scroll;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                -ms-overflow-style: none; 
+                scrollbar-width: none;
+
+                .langChange{
+                    width: 5vw;
+                    height: 5vw;
+                    max-width: 50px;
+                    min-width: 20px;
+                    max-height: 50px;
+                    min-height: 20px;
+
+                    background-image: url("../img/accueil/lang.svg");
+                    background-size: contain;
+
+                    position: absolute;
+                    justify-self: flex-end;
+                    margin: 1%;
+                    cursor: pointer;
+                }
+
+                h2{
+                    font-family: "Atma", sans-serif;
+                    font-size: calc(1.2rem + 2vmin);
+                }
+
+                p{
+                    font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
+                }
+
+                .btns{
+                    align-self: flex-end;
+
+                    button{
+                        padding: 2%;
+                        background-color: #246110;
+                        color: white;
+                        font-size: calc(0.8rem + 1vmin);
+
+                        margin: 1% 0;
+
+                        border: none;
+
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            .leftText.enfants{
+                display: none;
+            }
+        }
+    }
+
     .terre {
         width: 100vw;
         height: 100vh;
@@ -52,6 +158,8 @@
             max-height: 10vh;
             min-height: 12vh;
             height: fit-content;
+
+            cursor: pointer;
             
 
             background-color: #34801B;
@@ -80,7 +188,7 @@
         height: fit-content;
         min-height: 250vh;
         //
-        // mettre une image ici magueule
+        // mettre une image ici
         //
         display: grid;
         grid-template: auto 1fr / 1fr;
@@ -144,7 +252,7 @@
 
                 .img {
                     height: 70%;
-                    background-image: url("../img/accueil/article.png");
+                    
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
@@ -180,8 +288,32 @@
 
 }
 
+@media screen and (max-width:767px) and (orientation: landscape) {
+    .home {
+
+        .grinouilleModale{
+           
+    
+            .gMbody{
+                grid-template: 1fr / 4fr 3fr;
+                max-height: 100vh;
+            }
+        }
+    }
+}
+
 @media screen and (min-width:768px) and (orientation: portrait) {
     .home {
+
+        .grinouilleModale{
+           
+    
+            .gMbody{
+                grid-template: 1fr / 4fr 3fr;
+                max-height: 100vh;
+            }
+        }
+
 
 
         .terre {
@@ -212,7 +344,18 @@
 @media screen and (min-width:768px) and (orientation: landscape) {
     .home {
 
-        
+        .grinouilleModale{
+           
+    
+            .gMbody{
+                grid-template: 1fr / 4fr 3fr;
+                width: 90vw;
+                max-width: 1024px;
+                max-height: 700px;
+                max-height: 90%;
+                overflow-y: scroll;
+            }
+        }
 
         .terre {
 
@@ -263,7 +406,7 @@
 
                 .rubrique {
                     height: 60vh;
-                    width: 40vw;
+                    width: 35vw;
                     
 
                     .bouton {

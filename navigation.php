@@ -16,11 +16,11 @@
             
                 <a href="articles.php"><?php if($_SESSION["lang"] == "FR"){ echo "Articles"; } else if($_SESSION["lang"] == "EN"){echo "Articles";} ?></a>
 
-                <a href="quizes.php"><?php if($_SESSION["lang"] == "FR"){ echo "Les quiz"; } else if($_SESSION["lang"] == "EN"){echo "Quizes";} ?></a>
+                <a href="quiz.php?id=1"><?php if($_SESSION["lang"] == "FR"){ echo "Les quiz"; } else if($_SESSION["lang"] == "EN"){echo "Quizes";} ?></a>
             
 
             
-                <a href="games/planetClicker/"><?php if($_SESSION["lang"] == "FR"){ echo "Mini-jeux"; } else if($_SESSION["lang"] == "EN"){echo "Mini games";} ?></a>
+                <a href="jeux.php"><?php if($_SESSION["lang"] == "FR"){ echo "Mini-jeux"; } else if($_SESSION["lang"] == "EN"){echo "Mini games";} ?></a>
             
 
             

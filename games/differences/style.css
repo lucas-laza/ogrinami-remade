@@ -1,0 +1,159 @@
+body{
+    display: grid;
+    grid-template: auto 1fr / auto 1fr 1fr auto;
+    grid-template-areas: "titre titre titre titre"". originale game .";
+
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+
+    margin: 0;
+}
+
+
+.titre{
+    grid-area: titre;
+    margin: 2vh 1vw;
+
+    font-family: sans-serif;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.titre h1{
+    font-size: calc(1.2rem + 0.3vw);
+    margin: 0;
+}
+
+.titre h2{
+    font-size: calc(0.8rem + 0.18vw);
+    margin: 0;
+}
+
+.originale{
+    grid-area: originale;
+    
+    width: 100%;
+    height: 100%;
+
+}
+
+.game{
+    grid-area: game;
+    
+    width: 100%;
+    height: 100%;
+    
+    
+
+}
+
+.area{
+    aspect-ratio: 1 / 1;
+    max-height: 80vh;
+    margin: auto;
+
+}
+
+.originale .area {
+    
+    
+    background-color: aquamarine;
+    
+}
+
+.game .area {
+
+    background-color: tomato;
+    
+}
+
+.gameArea{
+    display: grid;
+    grid-template: repeat(7,1fr) / repeat(7,1fr);
+}
+
+.case{
+    border: 2px rgba(0, 0, 0, 0) solid;
+    
+}
+
+.case:hover{
+    border: 2px black solid;
+    transition: 0.1s ease;
+}
+
+.diff{
+    background-color: orange;
+    background-size: contain;
+}
+
+.modale{
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.781);
+}
+
+.modInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+
+}
+
+.modInfo h2{
+    color: white;
+    font-size: calc(1.5rem + 2vmin);
+
+}
+
+.modInfo p{
+    color: white;
+    font-size: calc(1rem + 1.5vmin);
+}
+
+.modInfo a{
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    padding: calc(0.2rem + 2vmin);
+    margin: 5vmin;
+    width: fit-content;
+}
+.modale .win{
+    display: none;
+}
+
+.modale .gameOver{
+    display: none;
+}
+
+@media screen and (orientation: portrait) {
+    body{
+        
+        grid-template: auto auto 1fr 1fr auto / 1fr;
+        grid-template-areas: "titre""." "originale" "game" ".";
+    
+        width: 100%;
+        min-height: 100vh;
+        
+        height: fit-content;
+    
+        margin: 0;
+    }
+
+    .area{
+        max-height: 45vh;
+        align-self: center;
+        justify-self: center;
+    }
+}

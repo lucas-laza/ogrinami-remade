@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/Ogrinami-logo-green.svg" type="image/x-icon">
     <title>Ogrinami</title>
 
     <link rel="stylesheet" href="styles/style.css">
@@ -28,10 +29,12 @@ if (!isset($_SESSION["lang"])){
 
 if (isset($_GET["id"])){
     $id = $_GET["id"];
-    $idQ = $_GET["q"];
+    
     
     if (!isset($_GET["q"])){
         $idQ = 0;
+    }else{
+        $idQ = $_GET["q"];
     }
 
     if ($idQ != 0){
@@ -64,8 +67,8 @@ if (isset($_GET["id"])){
                 
                 <div class="fq_img"><div class="fq_titre"><?php if ($_SESSION["lang"] == "FR"){echo $result["titre_fin_FR"];} else if ($_SESSION["lang"] == "EN"){echo $result["titre_fin_EN"];}?></div></div>
 
-                <div class="fq_para"><div><?php if ($_SESSION["lang"] == "FR"){echo $result["para_fin_FR"];} else if ($_SESSION["lang"] == "EN"){echo $result["para_fin_EN"];}?></div>
-                <a href="quiz.php?id=<?php echo $result["ext_id_quizz"] . "&q=0" ?>"><div class="rep r2"><?php if ($_SESSION["lang"] == "FR"){echo "Recommencer le quiz !";} else if ($_SESSION["lang"] == "EN"){echo "Retake the quiz !";}?></div></a></div>
+                <div class="fq_para"><div class=info_an>//<?php if ($_SESSION["lang"] == "FR"){echo $result["para_fin_FR"];} else if ($_SESSION["lang"] == "EN"){echo $result["para_fin_EN"];}?></div>
+                <a class="rep r2" href="quiz.php?id=<?php echo $result["ext_id_quizz"] . "&q=0" ?>"><?php if ($_SESSION["lang"] == "FR"){echo "Recommencer le quiz !";} else if ($_SESSION["lang"] == "EN"){echo "Retake the quiz !";}?></a></div>
                 
 
             </div>
@@ -85,7 +88,7 @@ if (isset($_GET["id"])){
             <div class="quizstart">
                 <div class="qs_titre"><?php if ($_SESSION["lang"] == "FR"){echo $result["titre_quizz_FR"];} else if ($_SESSION["lang"] == "EN"){echo $result["titre_quizz_EN"];}?></div>
                 <div class="qs_desc"><?php if ($_SESSION["lang"] == "FR"){echo $result["desc_quizz_FR"];} else if ($_SESSION["lang"] == "EN"){echo $result["desc_quizz_EN"];}?></div>
-                <div class="qs_img"><a href="quiz.php?id=<?php echo $id . "&q=" . $idFQ ?>"><div class="rep r2"><?php if ($_SESSION["lang"] == "FR"){echo "Faire le quiz !";} else if ($_SESSION["lang"] == "EN"){echo "Take the quiz !";}?></div></a></div>
+                <a class="qs_img" href="quiz.php?id=<?php echo $id . "&q=" . $idFQ ?>"><div class="rep r2"><?php if ($_SESSION["lang"] == "FR"){echo "Faire le quiz !";} else if ($_SESSION["lang"] == "EN"){echo "Take the quiz !";}?></div></a>
             </div>
         </div>
 
