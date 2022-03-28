@@ -18,6 +18,7 @@
 
 .article{
     width: 100vw;
+    display: grid;
 
     & *{
         max-width: 100%;
@@ -28,6 +29,8 @@
     display: grid;
     height: auto;
     width: 100vw;
+    justify-self: center;
+
     // margin: auto;
     // margin: auto;
     grid-template: 90px repeat(5,auto) 5vh repeat(3,auto)/ 1fr;
@@ -82,7 +85,6 @@
             width: 100%;
             height: 100%;
             position: relative;
-            border-radius: 0px;
             display: grid;
             grid-template-areas: 1fr / 1fr;
 
@@ -165,8 +167,13 @@
         
 
         div{
+            
+            
             audio{
                 margin: 2vh 0;
+                
+                
+
             }
         }
 
@@ -233,7 +240,7 @@
 
         .box_P{
             
-            background-color: #76AFEF;
+            background-color: #4e60b9;
            
             padding: 15px;
         }
@@ -303,7 +310,7 @@
 
         .box_P{
             
-            background-color: #76AFEF;
+            background-color: #4e60b9;
             color:white;
             
             padding: 15px;
@@ -390,7 +397,7 @@
         display: grid;
         // grid-template:  auto repeat(3,1fr) / 1fr;
         gap: 5vh;
-        // width: 100%;
+        width: 100%;
         height: 100vh;
 
     //     &>div{
@@ -421,7 +428,7 @@
 
             h4{
                 font-size: 0.9rem;
-                
+                text-align: center;
                 margin: 1vh;
             }
             .TB_BG{
@@ -432,18 +439,19 @@
                 
 
                 .TB_title{
+
                     
                     
                     justify-self: center;
-                    margin: 5%;
-                    padding: 3%;  
+                    margin: 2%;
+                    padding: 1.5%;  
                     position: absolute;
                     bottom: 0;
                     text-align: center;
                    
                     
 
-                    background-color: rgba(19, 19, 19, 0.644);
+                    background-color: #604ED0;
                     border-radius: 15px;
                     backdrop-filter: blur(5px);
 
@@ -478,7 +486,7 @@
         h3{
             margin: 0;
             padding: 1vh;
-            background-color: rgb(49, 49, 49);
+            background-color: rgb(110, 110, 110);
             width: 100%;
         }
 
@@ -494,7 +502,7 @@
                 width: 100%;
                 height: 50%;
 
-                background-color: darkblue;
+                background-color: rgb(110, 110, 110);
                 position: relative;
 
                 
@@ -509,15 +517,20 @@
                         min-width: 50%;
                         max-width: 80%;
                         color: white;
-                        border-radius: 50px;
+                        border-radius: 15px;
                         max-height: 50%;
-                        padding: 5%;
-                        background-color: darkgreen;
-                        margin: 5%;
+                        font-size: 0.8rem;
+                        padding: 0.5vh;
                         position: absolute;
-    
+                        text-align: center;
                         align-self: flex-end;
                         justify-self: center;
+                        font-family: "atma";
+                        margin: 20px;
+                        background-color: #604ED0;
+                        height: fit-content;
+                        width: fit-content;
+                        transition: ease-in-out 0.3s;
                     }
     
 
@@ -528,7 +541,7 @@
                 width: 100%;
                 height: 50%;
 
-                background-color:darkgoldenrod;
+                background-color:rgb(110, 110, 110);
 
                 a{
                     position: relative;
@@ -540,15 +553,20 @@
                         min-width: 50%;
                         max-width: 80%;
                         color: white;
-                        border-radius: 50px;
+                        border-radius: 15px;
                         max-height: 50%;
-                        padding: 5%;
-                        background-color: darkgreen;
-                        margin: 5%;
+                        font-size: 0.8rem;
+                        padding: 0.5vh;
                         position: absolute;
-    
+                        text-align: center;
                         align-self: flex-end;
                         justify-self: center;
+                        font-family: "atma";
+                        margin: 20px;
+                        background-color: #604ED0;
+                        height: fit-content;
+                        width: fit-content;
+                        transition: ease-in-out 0.3s;
                     }
     
 
@@ -568,7 +586,7 @@
 
         width: 100%;
         height: 30vh;
-        background-color: yellow;
+     
         padding: 2%;
 
         margin: 15vh 0;
@@ -580,7 +598,8 @@
             display: grid;
 
             .Grinouille_IMG{
-                background-color: yellowgreen;
+
+                background-image: url("../img/accueil/grinouille.png");
                 width: 100px;
                 height: 150px;
 
@@ -602,8 +621,23 @@
             align-self: center;
             text-align: center;
             
+            .lost{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: "atma";
+                font-size: 2rem;
+                color: black;
+                margin: 0;
+                h3{
+                    margin:0;
+                }
+
+                
+            }
 
             a{
+                text-decoration: none;
 
                 
                 display: grid;
@@ -612,8 +646,8 @@
                 .bouton{
                     
 
-                    background-color: royalblue;
-                    padding: 5%;
+                    background-color: #604ED0;
+                    padding: 2%;
                     width: auto;
                     border-radius: 15px;
 
@@ -621,8 +655,9 @@
                     justify-self: center;
 
                     p{
+                    font-family: "atma";
                     color: white;
-                    text-decoration: none;
+                    
                     font-size: 1.3rem;
                     }
 

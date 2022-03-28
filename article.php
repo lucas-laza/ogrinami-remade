@@ -283,7 +283,7 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                             <a href="parent.php">
                                 
                             <div class="bouton">Associations partenaires</div>
-                            <img src="img/article/1/2.webp" alt="">
+                            
                             </a>
                             
                             </div>
@@ -291,7 +291,7 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                           
                             <a href="shop.php">
                             <div class="bouton">Accéder à la boutique</div>
-                            <img src="img/article/1/2.webp" alt="">
+                            
                             </a>
                             </div>
                         </div>
@@ -430,10 +430,10 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
                                 </div>
                             </div>
                             <div class="Retour_T">
-                                <div>
+                                <div class="lost">
                                     <h3>Tu t'es perdu ?</h3>
                                 </div>
-                                <a href="accueil.php">
+                                <a href="index.php">
                             <div class="bouton"><p>retour à l'accueil</p></div>
                                 </a>
                             </div>
