@@ -596,6 +596,8 @@ body {
 }
 .container .Retour_Accueil .Grinouille .Grinouille_IMG {
   background-image: url("../img/accueil/grinouille.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 100px;
   height: 150px;
   justify-self: center;
