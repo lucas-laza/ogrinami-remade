@@ -67,7 +67,7 @@ if (isset($_GET["id"])){
                 
                 <div class="fq_img"><div class="fq_titre"><?php if ($_SESSION["lang"] == "FR"){echo $result["titre_fin_FR"];} else if ($_SESSION["lang"] == "EN"){echo $result["titre_fin_EN"];}?></div></div>
 
-                <div class="fq_para"><div class=info_an>blala infos animal<?php if ($_SESSION["lang"] == "FR"){echo $result["para_fin_FR"];} else if ($_SESSION["lang"] == "EN"){echo $result["para_fin_EN"];}?></div>
+                <div class="fq_para"><div class=info_an>//<?php if ($_SESSION["lang"] == "FR"){echo $result["para_fin_FR"];} else if ($_SESSION["lang"] == "EN"){echo $result["para_fin_EN"];}?></div>
                 <a class="rep r2" href="quiz.php?id=<?php echo $result["ext_id_quizz"] . "&q=0" ?>"><?php if ($_SESSION["lang"] == "FR"){echo "Recommencer le quiz !";} else if ($_SESSION["lang"] == "EN"){echo "Retake the quiz !";}?></a></div>
                 
 

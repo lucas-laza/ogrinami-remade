@@ -26,7 +26,7 @@ if (isset($_GET["id"])){
 
 $styleIMG1 = " background-image:url('http://www.ogrinami.com/img/article/$article/1.webp');
         background-position: center;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;";
 
 $styleIMG3 = " background-image:url('http://www.ogrinami.com/img/article/$article/3.webp');
