@@ -31,7 +31,8 @@
             -ms-overflow-style: none; 
             scrollbar-width: none;
 
-            background-color: #48d31a;
+            background-color: #6FB32B;
+            border-radius: 15px;
 
             
 
@@ -42,6 +43,7 @@
             .right{
                 background-color: rgba(145, 240, 126, 0.63);
                 margin: 5%;
+                border-radius: 15px;
 
                 background-image: url("../img/accueil/grinouille.png");
                 background-size: contain;
@@ -75,15 +77,21 @@
                     justify-self: flex-end;
                     margin: 1%;
                     cursor: pointer;
+                    transition: ease-in-out 0.3s;
+                    &:hover{
+                        transform: scale(1.15);
+                    }
                 }
 
                 h2{
                     font-family: "Atma", sans-serif;
                     font-size: calc(1.2rem + 2vmin);
+                    color: white;
                 }
 
                 p{
                     font-family: "Quicksand", Verdana, Geneva, Tahoma, sans-serif;
+                    color: white;
                 }
 
                 .btns{
@@ -91,7 +99,8 @@
 
                     button{
                         padding: 2%;
-                        background-color: #246110;
+                        background-color: #34801B;
+                        border-radius: 15px;
                         color: white;
                         font-size: calc(0.8rem + 1vmin);
 
@@ -100,6 +109,10 @@
                         border: none;
 
                         cursor: pointer;
+                        transition: ease-in-out 0.3s;
+                &:hover{
+                    transform: scale(0.97);
+                }
                     }
                 }
 
@@ -381,6 +394,10 @@
                 min-width: 35%;
                 width: fit-content;
                 justify-self: flex-start;
+                transition: ease-in-out 0.3s;
+                &:hover{
+                    transform: scale(0.97);
+                }
 
                 div {
                     font-size: calc(0.5rem + 2vw);
