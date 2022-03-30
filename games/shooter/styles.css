@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    background-color: rgb(25, 39, 21);
+    position: relative;
+}
+
+/****************** TITRE DU JEU ********************/
+
+h1, h3{
+  color: rgb(0, 255, 13);
+  font-family: 'Atma';
+  text-align: center;
+  margin: 0px;
+}
+
+.neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3.2rem;   
+  margin-top: 4vh; 
+}
+
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+  
+h3 {
+ font-size: 1rem;
+}
+
+
+
+/****************** VIES DU JOUEUR ********************/  
+
+
+.vie {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+}
+.vie1, .vie2, .vie3{
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.titre_vie{
+  font-family: 'Press Start 2P', cursive;
+}
+
+.nbvie img {
+  height: 30px;
+}
+
+
+/****************** SCORE DU JOUEUR ********************/  
+
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  padding: 5px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+}
+
+/****************** ZONE DU JEU ********************/  
+
+svg {
+  background-image: url(images/bg.png);
+  background-size: cover;
+  border-radius: 30%;
+  border: solid black 10px;
+}
+
+#arcade {
+  display: flex;
+  justify-content: center;
+}
+/****************** ZONE DU JOUEUR ********************/  
+
+#zone_du_joueur {
+  fill: rgb(33, 110, 39);
+  background-image: url(images/bg.png);
+}
+
+/****************** JOUEUR ********************/  
+
+#joueur {
+  pointer-events: none;
+}
+

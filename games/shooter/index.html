@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PAC-MAN | Projet Shoot them up !</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/vie.png" />
+
+    <!-- CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- CSS -->
+
+    <!-- JavaScript -->
+    <script src="d3.js"></script>
+    <!-- JavaScript -->
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <!-- FONT -->
+</head>
+
+<body>
+    <!----------- TITRES ----------------->
+    <header>
+        <div>
+            <h1 class="neonText">Ogrinami Shooter</h1>
+            <h3>Sauve la planète !</h2>
+        </div>
+    </header>
+    <!----------- PARTIE POUR LES VIES ----------------->
+
+    <div class="vie nbvie">
+        <p class="titre_vie">vie(s) : </p>
+        <img class="vie1" src="images/vie.png">
+        <img class="vie2" src="images/vie.png" >
+        <img class="vie3" src="images/vie.png">
+        <p class="score"> score : <span id="points"> </span> </p>
+    </div>
+
+
+<!----------- JEU ----------------->
+
+    <div id="arcade">
+        
+        <!----------- ZONE DU JEU  ----------------->
+         <svg width="100vmin" height="75vmin" viewBox="0 0 100 100">
+
+    <!----------- ZONE DU JOUEUR ----------------->
+     
+            <rect x="85" y="1" width="40" height="98"
+                id="zone_du_joueur" />
+
+            <defs>
+
+                
+             <!----------- PACMAN ----------------->
+
+                <g id="joueur">
+                    <image xlink:href="images/joueur.png" width="15" height="15" x="-12" y="-13" />
+
+                </g>
+
+                <!----------- TIR DE PACMAN (FRUITS) ----------------->
+                <g id="tir_joueur">
+                    <image xlink:href="images/fruits.png" width="8" height="8" x="-1" y="-4.5" />
+                </g>
+              
+
+               <!-----------FANTOME ----------------->
+                <g id="ennemis">
+                    <image xlink:href="images/ennemi.png" width="10" height="10" x="-7" y="-5" />
+                </g>
+              <!----------- TIR FANTOME (BALLS) ----------------->
+                <g id="tir_ennemi">
+                  <image xlink:href="images/balls.png" width="6" height="6" x="-4" y="0" />
+                </g>
+               
+            </defs>
+        </svg>
+
+    </div>
+
+       <!----------- fichier javascript -----------------> 
+
+    <script src="main.js" type="text/javascript"></script>
+</body>
