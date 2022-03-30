@@ -249,5 +249,5 @@ function findCase(where,num){
 }
 
 document.querySelectorAll(".area").forEach(element => {
-    element.style.backgroundImage = `url("img/paysage1/imageDifferences.png")`;
+    element.style.backgroundImage = `url("img/paysage1/imageDifferences.PNG")`;
 });

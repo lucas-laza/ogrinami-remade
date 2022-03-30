@@ -24,7 +24,7 @@
             
 
             
-                <a href=""><?php if($_SESSION["lang"] == "FR"){ echo "À propos"; } else if($_SESSION["lang"] == "EN"){echo "About";} ?></a>
+                <a href="about.php"><?php if($_SESSION["lang"] == "FR"){ echo "À propos"; } else if($_SESSION["lang"] == "EN"){echo "About";} ?></a>
            
 
 </div>

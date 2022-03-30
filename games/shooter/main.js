@@ -79,7 +79,7 @@ function speedAttacks() {
 
    
     if (deleteTab(tir_pacman, attacksPacman =>
-        deleteTab(ennemis, fantome => distance(attacksPacman, fantome) < 4))) {  
+        deleteTab(ennemis, fantome => distance(attacksPacman, fantome) < 8))) {  
         createFantome();
      
         document.querySelector('#points').innerHTML = score;
